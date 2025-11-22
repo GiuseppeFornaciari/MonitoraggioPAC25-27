@@ -1,0 +1,459 @@
+﻿@model MonitoraggioPAC25_27.Models.Output
+
+@{
+    ViewData["Title"] = "OUTPUT";
+    bool isResponsabileMinistero = ViewData["isResponsabileMinistero"] is true;
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-12 col-lg-10">
+        <div class="card mb-4 shadow-sm border-0">
+            <div class="card-header text-white fw-semibold" style="background-color: #2c3e50;">
+                Dettagli Output @Html.DisplayFor(model => model.CodOutputCompleto)
+            </div>
+            <div class="card-body">
+                <div class="info-block">
+                    <div class="info-label">Monitoraggio al</div>
+                    <div class="info-value">@($"{Model.IdProgettoNavigation?.IdSchedaNavigation?.DataMonitoraggio}")</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Progetto</div>
+                    <div class="info-value">@(Model.IdProgettoNavigation?.CodProgetto + " - " + Model.IdProgettoNavigation?.Progetto)</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Scheda</div>
+                    <div class="info-value">@(Model.IdProgettoNavigation?.IdSchedaNavigation?.CodScheda + " - " + Model.IdProgettoNavigation?.IdSchedaNavigation?.Scheda)</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Tema</div>
+                    <div class="info-value">@(Model.CodTemaNavigation?.Tema)</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Responsabile Progetto Ente</div>
+                    <div class="info-value">@ViewBag.ResonsabiliProgettoEnte</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Responsabile Scheda Ente</div>
+                    <div class="info-value">@ViewBag.ResonsabileSchedaEnte</div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-label">Responsabile Progetto Ministero</div>
+                    <div class="info-value">@ViewBag.ResponsabiliProgettoMinistero</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-12">
+                <form asp-action="Output">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="IdOutput" />
+                    <input type="hidden" asp-for="CodOutputCompleto" />
+                    <input type="hidden" asp-for="OutputDescrizione" />
+                    <input type="hidden" asp-for="IdProgetto" />
+                    <input type="hidden" asp-for="CodTema" />
+                    <input type="hidden" asp-for="ObiettivoRete" />
+                    <input type="hidden" asp-for="CodPriorita" />
+
+                    <div class="form-group row mb-3">
+                        <label asp-for="CodTipoOutput" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <select asp-for="CodTipoOutput" class="form-select" asp-items="ViewBag.CodTipoOutput" disabled="disabled"></select>
+                            <span asp-validation-for="CodTipoOutput" class="text-danger"></span>
+                            <input type="hidden" asp-for="CodTipoOutput" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label asp-for="OutputProgrammato" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <textarea asp-for="OutputProgrammato" class="form-control auto-expand" disabled="disabled"></textarea>
+                            <input type="hidden" asp-for="OutputProgrammato" />
+                            <span asp-validation-for="OutputProgrammato" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        @if (Model.Comunicazione == true)
+                        {
+                            <label class="col-sm-2 label-highlight">Output comunicazione</label>
+                        }
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label asp-for="OutputRealizzato" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <textarea asp-for="OutputRealizzato" class="form-control auto-expand" disabled="@(isResponsabileMinistero)"></textarea>
+                            <input type="hidden" asp-for="OutputRealizzato" />
+                            <span asp-validation-for="OutputRealizzato" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label asp-for="RisultatiAttesi" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <textarea asp-for="RisultatiAttesi" class="form-control auto-expand" disabled="disabled"></textarea>
+                            <input type="hidden" asp-for="RisultatiAttesi" />
+                            <span asp-validation-for="RisultatiAttesi" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label asp-for="OutputLink" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <textarea asp-for="OutputLink" class="form-control auto-expand" disabled="@(isResponsabileMinistero)"></textarea>
+                            <input type="hidden" asp-for="OutputLink" />
+                            <span asp-validation-for="OutputLink" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3 @(isResponsabileMinistero ? "d-none" : "")" style="margin-top: -25px;">
+                        <label asp-for="OutputAllegato" class="col-sm-2 label-highlight" style="margin-top: 25px;"></label>
+                        <div class="col-sm-10">
+                            <div id="allegati">
+                                <div id="allegati-container-@Model.IdOutput"></div>
+                                <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-danger text-white">
+                                                <h5 class="modal-title" id="confirmDeleteModalLabel">Conferma cancellazione</h5>
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Sei sicuro di voler eliminare il file <strong id="fileNameToDelete"></strong>?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                                                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Elimina</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label asp-for="NumOutputProgrammato" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <input asp-for="NumOutputProgrammato" type="text" class="form-control text-end" maxlength="2" style="max-width: 70px;" disabled="disabled" text-align: right />
+                            <input type="hidden" asp-for="NumOutputProgrammato" />
+                            <span asp-validation-for="NumOutputProgrammato" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label asp-for="NumOutputRealizzato" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <input asp-for="NumOutputRealizzato" type="text" class="form-control text-end" maxlength="2" style="max-width: 70px;" disabled="@(isResponsabileMinistero)" />
+                            <input type="hidden" asp-for="NumOutputRealizzato" />
+                            <span asp-validation-for="NumOutputRealizzato" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label asp-for="NumOutputNonProgrammato" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <input asp-for="NumOutputNonProgrammato" type="text" class="form-control text-end" maxlength="2" style="max-width: 70px;" disabled="@(isResponsabileMinistero)" />
+                            <input type="hidden" asp-for="NumOutputNonProgrammato" />
+                            <span asp-validation-for="NumOutputNonProgrammato" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label asp-for="NoteOutputResponsabileEnte" class="col-sm-2 label-highlight"></label>
+                        <div class="col-sm-10">
+                            <textarea asp-for="NoteOutputResponsabileEnte" class="form-control auto-expand" disabled="@(isResponsabileMinistero)"></textarea>
+                            <input type="hidden" asp-for="NoteOutputResponsabileEnte" />
+                            <span asp-validation-for="NoteOutputResponsabileEnte" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="card border-start border-4 border-light mb-4 shadow-sm">
+                        <div class="card-header bg-body-tertiary text-dark fw-semibold">
+                            <i class="bi bi-person-vcard me-2"></i> Sezione a cura del Responsabile Ministero
+                        </div>
+                        <div class="card-body">
+                            @if (ViewData["isResponsabileMinistero"] is true)
+                            {
+                                <!-- Modalità MODIFICA -->
+                                <div class="form-group row mb-3">
+                                    <label asp-for="ParereResponsabileMinistero" class="col-sm-2 label-highlight"></label>
+                                    <div class="col-sm-10 d-flex align-items-center flex-wrap">
+                                        <div class="form-check form-check-inline me-3">
+                                            <input class="form-check-input" type="radio" asp-for="ParereResponsabileMinistero" value="1" id="Parere1" />
+                                            <label class="form-check-label" for="Parere1">Conforme</label>
+                                        </div>
+                                        <div class="form-check form-check-inline me-3">
+                                            <input class="form-check-input" type="radio" asp-for="ParereResponsabileMinistero" value="2" id="Parere2" />
+                                            <label class="form-check-label" for="Parere2">Parzialmente conforme (incompleto)</label>
+                                        </div>
+                                        <div class="form-check form-check-inline me-3">
+                                            <input class="form-check-input" type="radio" asp-for="ParereResponsabileMinistero" value="3" id="Parere3" />
+                                            <label class="form-check-label" for="Parere3">Non conforme</label>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm ms-2" id="resetParereBtn">
+                                            Annulla selezione
+                                        </button>
+                                    </div>
+                                    <div class="offset-sm-2 col-sm-10">
+                                        <span asp-validation-for="ParereResponsabileMinistero" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-3">
+                                    <label asp-for="MotivazioneResponsabileMinistero" class="col-sm-2 label-highlight"></label>
+                                    <div class="col-sm-10">
+                                        <textarea asp-for="MotivazioneResponsabileMinistero" class="form-control auto-expand"></textarea>
+                                        <span asp-validation-for="MotivazioneResponsabileMinistero" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+@*                                 <div class="form-group row mb-3">
+                                    <label asp-for="Comunicazione" class="col-sm-2 label-highlight"></label>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input asp-for="Comunicazione" class="form-check-input" type="checkbox" id="Comunicazione" />
+                                            <label class="form-check-label" for="Comunicazione">Comunicazione al soggetto attuatore</label>
+                                            <span class="ms-2 text-muted">
+                                                @(Model.ComunicazioneData.HasValue ? $"(Data: {Model.ComunicazioneData.Value:dd/MM/yyyy})" : "")
+                                            </span>
+                                        </div>
+                                        <span asp-validation-for="Comunicazione" class="text-danger"></span>
+                                    </div>
+                                </div> *@
+                                <div class="form-group row mb-3">
+                                    @if (Model.Comunicazione == true)
+                                    {
+                                        <label class="col-sm-2 label-highlight">Output comunicazione</label>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <!-- Modalità SOLA LETTURA -->
+                                <div class="form-group row mb-3">
+                                    <label class="col-sm-2 label-highlight">Parere Responsabile Ministero</label>
+                                    <div class="col-sm-10">
+                                        <p class="form-control-plaintext">
+                                            @{
+                                                var parere = Model.ParereResponsabileMinistero;
+                                                var testoParere = parere switch
+                                                {
+                                                    1 => "Conforme",
+                                                    2 => "Parzialmente conforme (incompleto)",
+                                                    3 => "Non conforme",
+                                                    _ => "Nessun parere"
+                                                };
+                                                @testoParere
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-3">
+                                    <label class="col-sm-2 label-highlight">Motivazione</label>
+                                    <div class="col-sm-10">
+                                        <p class="form-control-plaintext">@Model.MotivazioneResponsabileMinistero</p>
+                                    </div>
+                                </div>
+
+                                @*                                
+                                <div class="form-group row mb-3">
+                                    <label class="col-sm-2 label-highlight">Comunicazione</label>
+                                    <div class="col-sm-10">
+                                        <p class="form-control-plaintext">
+                                            @(Model.Comunicazione ? "Sì" : "No")
+                                            @if (Model.ComunicazioneData.HasValue)
+                                            {
+                                                <span class="ms-2 text-muted">(Data: @Model.ComunicazioneData.Value.ToString("dd/MM/yyyy"))</span>
+                                            }
+                                        </p>
+                                    </div>
+                                </div> *@
+                                <div class="form-group row mb-3">
+                                    @if (Model.Comunicazione == true)
+                                    {
+                                        <label class="col-sm-2 label-highlight">Comunicazione</label>
+                                    }
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="submit"
+                            value="@(isResponsabileMinistero ? "Salva parere su Output" : "Salva Output")"
+                            class="btn btn-primary" />
+                    </div>
+                </form>
+                <br />
+
+                <div>
+                    <a asp-action="ElencoSchedeProgetto" asp-controller="Schede">Torna a schede e progetti</a>
+                </div>
+                <div>
+                    <a asp-action="Progetto" asp-controller="Progetti" asp-route-id="@Model.IdProgetto">Torna al progetto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const id = "@Model.IdOutput";
+
+            // 🔄 Carica allegati al caricamento iniziale
+            fetch(`/Output/GetAllegati/${id}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(`allegati-container-${id}`).innerHTML = html;
+                })
+                .catch(error => {
+                    console.error("Errore nel caricamento degli allegati per Output " + id, error);
+                });
+
+            // ⬆️ Upload file con bottone .btn-upload (non form submit)
+            document.body.addEventListener('click', function (e) {
+                if (e.target.classList.contains('btn-upload')) {
+                    const uploadForm = e.target.closest('.upload-form');
+                    const idOutput = uploadForm.getAttribute('data-idoutput');
+                    const fileInput = uploadForm.querySelector('input[type="file"]');
+                    const file = fileInput.files[0];
+
+                    if (!file) {
+                        alert('Seleziona un file da caricare.');
+                        return;
+                    }
+
+                    const formData = new FormData();
+                    formData.append('idOutput', idOutput);
+                    formData.append('file', file);
+
+                    fetch('/Output/UploadAllegato', {
+                        method: 'POST',
+                        body: formData
+                    })
+                        .then(res => res.text())
+                        .then(html => {
+                            document.getElementById(`allegati-container-${idOutput}`).innerHTML = html;
+                            fileInput.value = ""; // reset file input
+
+                            setTimeout(() => {
+                                const allegatiSection = document.getElementById('allegati');
+                                if (allegatiSection) {
+                                    allegatiSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                            }, 50);
+                        })
+                        .catch(err => alert('Errore durante il caricamento del file'));
+                }
+            });
+
+            // 🗑️ Gestione modale eliminazione
+            const confirmDeleteModal = document.getElementById('confirmDeleteModal');
+            const fileNameToDeleteElem = document.getElementById('fileNameToDelete');
+            let idOutputToDelete = null;
+            let fileNameToDelete = null;
+
+            confirmDeleteModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                fileNameToDelete = button.getAttribute('data-file');
+                idOutputToDelete = button.getAttribute('data-idoutput');
+                fileNameToDeleteElem.textContent = fileNameToDelete;
+            });
+
+            // ❌ Conferma eliminazione file
+            document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+                fetch('/Output/DeleteAllegato', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': getRequestVerificationToken()
+                    },
+                    body: JSON.stringify({ idOutput: idOutputToDelete, fileName: fileNameToDelete })
+                })
+                    .then(res => {
+                        if (!res.ok) throw new Error('Errore nella cancellazione');
+                        return res.text();
+                    })
+                    .then(html => {
+                        document.getElementById(`allegati-container-${idOutputToDelete}`).innerHTML = html;
+                        const modal = bootstrap.Modal.getInstance(confirmDeleteModal);
+                        modal.hide();
+                    })
+                    .catch(err => alert(err.message));
+            });
+
+            function getRequestVerificationToken() {
+                const token = document.querySelector('input[name="__RequestVerificationToken"]');
+                return token ? token.value : '';
+            }
+        });
+    </script>
+
+    <style>
+        textarea.auto-expand {
+            overflow: hidden;
+            resize: none;
+        }
+    </style>
+
+    <script>
+        function autoExpand(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('textarea.auto-expand').forEach(autoExpand);
+        });
+
+        document.addEventListener('input', function (event) {
+            if (event.target.classList.contains('auto-expand')) {
+                autoExpand(event.target);
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputProgrammato = document.getElementById('NumOutputProgrammato');
+            const inputRealizzato = document.getElementById('NumOutputRealizzato');
+
+            function validateOutputs() {
+                const programmato = parseInt(inputProgrammato.value) || 0;
+                const realizzato = parseInt(inputRealizzato.value) || 0;
+
+                if (realizzato > programmato) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Attenzione!',
+                        text: 'Il numero di output realizzati non può superare quello programmato.',
+                        confirmButtonText: 'OK'
+                    }).then(() => {
+                        inputRealizzato.value = programmato;
+                        inputRealizzato.focus();
+                    });
+                }
+            }
+
+            inputProgrammato.addEventListener('input', validateOutputs);
+            inputRealizzato.addEventListener('input', validateOutputs);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const resetParereBtn = document.getElementById("resetParereBtn");
+
+            if (resetParereBtn) {
+                resetParereBtn.addEventListener("click", function () {
+                    document.querySelectorAll("input[name='ParereResponsabileMinistero']").forEach(r => r.checked = false);
+                });
+            }
+        });
+    </script>
+}

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MonitoraggioPAC25_27.Models.Schede>
+
+@{
+    ViewData["Title"] = "Gestione schede";
+}
+<h1>GESTIONE Schede</h1>
+<p>
+    <a asp-action="NuovaScheda" asp-controller="Schede" class="btn btn-primary">Nuovo scheda</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodScheda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scheda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodEnte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataMonitoraggio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodScheda)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Scheda)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodEnteNavigation.DescrizioneEnte)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataMonitoraggioNavigation.DataMonitoraggio)
+                </td>
+                <td>
+                    <a asp-action="Scheda" asp-route-id="@item.IdScheda">Modifica</a> |
+                    <a asp-action="EliminaScheda" asp-route-id="@item.IdScheda">Elimina</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

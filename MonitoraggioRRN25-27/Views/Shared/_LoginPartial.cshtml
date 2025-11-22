@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        string ruolo = "";
+        if (User.IsInRole("segretariato"))
+        {
+            ruolo = "segretariato";
+        }
+        if (User.IsInRole("responsabile scheda"))
+        {
+            ruolo = "responsabile scheda";
+        }
+        if (User.IsInRole("referente progetto"))
+        {
+            ruolo = "referente progetto";
+        }
+        if (User.IsInRole("referente ministero"))
+        {
+            ruolo = "referente ministero";
+        }
+        if (User.IsInRole("administrator"))
+        {
+            ruolo = "administrator";
+        }
+
+        <li class="nav-item">
+            @*         
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><span style="font-weight:bold;">@ruolo</span>: @User.Identity?.Name</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><span style="font-weight:bold;">USER</span>: @await Component.InvokeAsync("LoginInfo")</a>
+
+        *@            
+                <a class="nav-link text-dark" asp-area="Identity" title="Manage"><span style="font-weight:bold;">USER</span>: @await Component.InvokeAsync("LoginInfo")</a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-primary text-white px-3" style="font-weight:bold;">
+                    Logout
+                </button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link btn btn-primary text-white px-3" asp-area="Identity" asp-page="/Account/Login" style="font-weight:bold;">
+                Login
+            </a>
+        </li>
+    }
+</ul>
+
+

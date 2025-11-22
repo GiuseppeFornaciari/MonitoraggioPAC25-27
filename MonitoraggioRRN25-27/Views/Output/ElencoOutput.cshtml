@@ -1,0 +1,144 @@
+﻿@model IEnumerable<MonitoraggioPAC25_27.Models.Output>
+
+@{
+    ViewData["Title"] = "Output";
+}
+
+<h1>GESTIONE Output</h1>
+
+<p>
+    <a asp-action="NuovoOutput" asp-controller="Output" class="btn btn-primary">Nuovo output</a>
+</p>
+@if (Model == null)
+{
+    <span>nessuna output abilitato</span>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+@*                 <th>
+                    @Html.DisplayNameFor(model => model.CodPriorita)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ObiettivoRete)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RisultatiAttesi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodTipoOutput)
+                </th> *@
+                <th>
+                    @Html.DisplayNameFor(model => model.CodOutputCompleto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OutputDescrizione)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OutputProgrammato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OutputRealizzato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumOutputProgrammato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumOutputRealizzato)
+                </th>
+@*                 <th>
+                    @Html.DisplayNameFor(model => model.OutputAllegato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OutputLink)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NoteOutputResponsabileEnte)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParereResponsabileMinistero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MotivazioneResponsabileMinistero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Comunicazione)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodTemaNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdProgettoNavigation)
+                </th> *@
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+@*                     <td>
+                        @Html.DisplayFor(modelItem => item.CodPriorita)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ObiettivoRete)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RisultatiAttesi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodTipoOutput)
+                    </td> *@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodOutputCompleto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OutputDescrizione)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OutputProgrammato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OutputRealizzato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumOutputProgrammato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumOutputRealizzato)
+                    </td>
+ @*                    <td>
+                        @Html.DisplayFor(modelItem => item.OutputAllegato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OutputLink)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoteOutputResponsabileEnte)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParereResponsabileMinistero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MotivazioneResponsabileMinistero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Comunicazione)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodTemaNavigation.CodTema)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdProgettoNavigation.idProgetto)
+                    </td> *@
+                    <td>
+                        <a asp-action="Output" asp-route-id="@item.IdOutput">Modifica</a> |
+                        <a asp-action="EliminaOutput" asp-route-id="@item.IdOutput">Elimina</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

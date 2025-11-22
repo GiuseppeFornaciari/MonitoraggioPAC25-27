@@ -1,0 +1,2404 @@
+﻿SELECT TOP (1000) [IdScheda]
+      ,[CodScheda]
+      ,[CodEnte]
+      ,[Scheda]
+      ,[DataMonitoraggio]
+  FROM [Schede]
+
+
+--- 1 SCHEDE da file excel  
+--INSERT INTO Schede ([CodScheda],[CodEnte],[Scheda],[DataMonitoraggio]) VALUES ('CR01',2,'WP1 - Nucleo di supporto all''attuazione del PSP','2025-12-31')
+--INSERT INTO Schede ([CodScheda],[CodEnte],[Scheda],[DataMonitoraggio]) VALUES ('CR02',2,'WP2 - Osservatorio “Analisi e definizione delle politiche”','2025-12-31')
+--INSERT INTO Schede ([CodScheda],[CodEnte],[Scheda],[DataMonitoraggio]) VALUES ('CR03',2,'WP3 - Osservatorio “Agricoltura, dinamiche settoriali e di filiera”','2025-12-31')
+--INSERT INTO Schede ([CodScheda],[CodEnte],[Scheda],[DataMonitoraggio]) VALUES ('CR04',2,'WP4 - Osservatorio “Sostenibilità ambientale, processi produttivi e benessere animale”','2025-12-31')
+--INSERT INTO Schede ([CodScheda],[CodEnte],[Scheda],[DataMonitoraggio]) VALUES ('CR05',2,'WP5 - Osservatorio “Sviluppo locale, dinamiche socio-economiche territoriali”','2025-12-31')
+--INSERT INTO Schede ([CodScheda],[CodEnte],[Scheda],[DataMonitoraggio]) VALUES ('CR06',2,'WP6 - Osservatorio “Sviluppo e trasferimento di conoscenze, competenze ed innovazione”','2025-12-31')
+--INSERT INTO Schede ([CodScheda],[CodEnte],[Scheda],[DataMonitoraggio]) VALUES ('CR07',2,'WP7 - Nucleo “Sviluppo attività di informazione e supporto all’accrescimento di competenze sui temi del PSP”','2025-12-31')
+
+
+--- 2 PROGETTI da file excel  
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.01','Supporto orizzontale all''attuazione del PSP')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.02','Supporto al monitoraggio del PSP')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.03','Supporto alla governance e promozione della cultura della valutazione della PAC - Go – Val')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.04','Coordinamento tecnico-scientifico e Implementazione del Piano di Azione ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.05','La normativa sulla concorrenza e gli Aiuti di Stato in ambito PSP/CSR - AdS')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.06','Hubs RetePAC')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.07','Banca dati bandi CSR')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.08','Monit LEADER: supporto per l’attuazione')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.09','Supporto alla politica forestale e alle agroenergie e biomasse forestali - SPF')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.10','Rapporti con la Rete PAC e i progetti di ricerca europei')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.11','Sistemi agroforestali - SAF')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.12','Zone svantaggiate')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR01.13','AT per interventi settoriali – Filiera delle api e del miele')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (8,'CR02.01','Analisi dell’evoluzione della PAC e integrazione con le Politiche nazionali, il PNRR e la Politica di Coesione - Policy perspective')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR02.02 ','Bussola della sostenibilità agricola e alimentare - Bussa')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR02.03','Condizionalità sociale in Italia - ConSo')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR02.04','Repository della Valutazione della PAC – Re.Val.Pac')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR02.05','Scenari internazionali, commercio estero e impatto sul sistema agroalimentare italiano –ITATRADE_IMPACT')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR02.06','Metodi di analisi delle politiche agricole per l’ambiente - METHODS4CAP')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR02.07','Valutazione e analisi delle politiche agricole attraverso metodologie innovative - PILOT4TOOLS')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR02.08','Gender equality nei PSP - GE_PSP')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (9,'CR03.01','I profili imprenditoriali nell’agricoltura italiana - AgriProfili')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.02','Limitare gli sprechi alimentari per la gestione sostenibile del cibo - GESTIRECIBO')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.03','Donne e lavoro dipendente nel settore primario – GE_DIP ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.04','Lo sviluppo delle agroenergie per la diversificazione aziendale e lo sviluppo della bioeconomia e piattaforma Indicatori di Sostenibilità per la Bioenergia della Global Bioenergy Partnership - FER   ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.05','Territori Rurali in Evoluzione. Il ruolo delle Indicazioni Geografiche come fattore di equilibrio tra competitività e sostenibilità - TRE ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.06','Rafforzamento della filiera sughericola')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.07','Giovani e donne, nuove frontiere per l’imprenditoria agricola – GeDAgri')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.08','La valorizzazione dei prodotti biologici nei biodistretti - VALBIO')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.09','Imprese dell’industria agroalimentare e traiettorie di sviluppo delle aree rurali - RURAL IN FOOD')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.10','Il ruolo delle donne nelle filiere produttive del settore primario - GE_FIP')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.11','Analisi MUlticriTEriale di VOcazionaLItà del territorio per le FILIERE agricole e valutazione dell’impatto dei trend climatici - MUTEVOLI.FILIERE')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.12','AGROECOlogia da VEdere: le COOPerative per l’agroecologia - AGROECOOP')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.13','DISTRETTI DEL CIBO - DIREFOOD')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (10,'CR03.14','Agricultural Synergies for agri-food – AGRISYN')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.01','Le prospettive dell’approccio One Health nella gestione delle filiere dei prodotti di origine animale - FIL_ZOO_OH')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.02','Interventi a supporto di pratiche benefiche per api, impollinatori e biodiversità - BOMBO ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.03','Reti di consapevolezza sull’agricoltura conservativa - SODO')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.04','Monitoraggio di INDicatori Agrometeorologici - AgroMIND')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.05','Cooperazione per azioni ambientali collettive - PARCHI ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.06','Carbon farming')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.07','Crediti di carbonio forestali - CCF ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.08','Recovery of Ecosystem Services Through Optimal Restoration Efforts – RESTORE')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.09','Arboricoltura, pioppicoltura e sistemi agroforestali')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.10','RETE FENOLOGICA NAZIONALE - RFN')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.11','Vivaistica forestale - VF')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.12','Supporto all’assessment degli impatti della PAC sullo stato dei suoli agricoli e forestali italiani')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.13','BIODIVERSITA’ ZOOTECNICA, Benessere Animale e Acqua - BIDIZA')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.14','Sostenibilità socio-ambientale dell’uso della risorsa idrica - SoSAcqua')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.15','Analisi dei benefici ambientali della PAC attraverso l''uso di modelli - PACEM')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.16','Elementi di valutazione del sostegno all’agricoltura biologica tra vecchia e nuova programmazione – ELVASOBIO ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (11,'CR04.17','Aree agricole ad alto valore naturale')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.01','ReteLEADER')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.02','Leader Proofing tools - LPT')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.03','Smart Rural Lab -SRL')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.04','Associazioni fondiarie in Italia - ASFO')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.05','La multidimensionalità del turismo rurale – TUR-PSP')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.06','Politiche locali del cibo - POLICIBO')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.07','Long Term vision e rigenerazione territoriale - LTV')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.08','BeQuVAR - Benessere e qualità della vita nelle aree rurali')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.09','Economia Comportamentale per lo Sviluppo delle Aree Rurali - ECOSAR')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.10','Servizi ecosistemici di valore socio-sanitario - SEV')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (12,'CR05.11','Indagine permanente, networking, analisi e classificazione e osservatorio distretti biologici - DIBIO')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.01','Animazione e supporto all’attuazione del PEI-Agri')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.02','Co-progettazione e promozione di un master di 2° livello per la formazione di consulenti - MASTER AKIS ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.03','CONNESSIONI RURALI – Open farms, dal laboratorio al campo ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.04','Scuola Giovani Pastori ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.05','Digitalizzazione del settore forestale (Precision Forestry) ')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.06','Supporto allo sviluppo del sistema della conoscenza e dell’innovazione per l’agroalimentare: capitale umano, relazioni e flussi, strumenti di supporto – INNAKIS')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.07','La sfida delle competenze per l’agroalimentare italiano - Agroskills')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.08','Impatto della DIGitalizzazione dell’agricoltura per la Rete PAC - DIGIPAC')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (13,'CR06.09','FORMAZIONE per il RAFFORZAMENTO degli AKIS - 4AKIS')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (14,'CR07.01','Supporto alla Rete PAC per la diffusione e il trasferimento delle conoscenze – RetePAC Web')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (14,'CR07.02','Partecipazione coordinata eventi')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (14,'CR07.03','ECCELLENZE RURALI – ER')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (14,'CR07.04','PAC GAMIFICATION (SERIOUS GAME)')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (14,'CR07.05','RetePAC Magazine')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (14,'CR07.06','OLEARIO. Dove l’Italia lascia il segno')
+--INSERT INTO Progetti ([idScheda],[CodProgetto],[Progetto]) VALUES (14,'CR07.07','BIOREPORT')
+
+---SELECT CodProgetto,idProgetto FROM Progetti WHERE idProgetto>32 ORDER BY idProgetto
+
+--SELECT * FROM Utenti
+--SELECT * FROM AspNetUsers ORDER BY UserName
+
+SELECT * FROM UtentiProgettoEnte
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (33,(SELECT idUtente FROM Utenti WHERE Utente ='Stefano Angeli'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (34,(SELECT idUtente FROM Utenti WHERE Utente ='Beatrice Camaioni'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (35,(SELECT idUtente FROM Utenti WHERE Utente ='Martina Bolli'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (35,(SELECT idUtente FROM Utenti WHERE Utente ='Assunta Amato'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (36,(SELECT idUtente FROM Utenti WHERE Utente ='Paola Lionetti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (37,(SELECT idUtente FROM Utenti WHERE Utente ='Giulia Diglio'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (37,(SELECT idUtente FROM Utenti WHERE Utente ='Giorgia Matteucci'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (38,(SELECT idUtente FROM Utenti WHERE Utente ='Beatrice Camaioni'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (39,(SELECT idUtente FROM Utenti WHERE Utente ='Pierpaolo Pallara'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (40,(SELECT idUtente FROM Utenti WHERE Utente ='Raffaella Di Napoli'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (40,(SELECT idUtente FROM Utenti WHERE Utente ='Fabio Muscas'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (41,(SELECT idUtente FROM Utenti WHERE Utente ='Raoul Romano'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (42,(SELECT idUtente FROM Utenti WHERE Utente ='Valentina Carta'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (42,(SELECT idUtente FROM Utenti WHERE Utente ='Mara Lai '))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (43,(SELECT idUtente FROM Utenti WHERE Utente ='Rosa Rivieccio'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (44,(SELECT idUtente FROM Utenti WHERE Utente ='Daniela Storti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (45,(SELECT idUtente FROM Utenti WHERE Utente ='Milena Verrascina'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (46,(SELECT idUtente FROM Utenti WHERE Utente ='Serena Tarangioli'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (46,(SELECT idUtente FROM Utenti WHERE Utente ='Alessandro Monteleone'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (47,(SELECT idUtente FROM Utenti WHERE Utente ='Maria Rosaria Pupo D''Andrea'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (48,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Giarè'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (49,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Varia'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (50,(SELECT idUtente FROM Utenti WHERE Utente ='Roberto Solazzo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (50,(SELECT idUtente FROM Utenti WHERE Utente ='Federica De Maria'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (51,(SELECT idUtente FROM Utenti WHERE Utente ='Roberto Solazzo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (52,(SELECT idUtente FROM Utenti WHERE Utente ='Roberto Cagliero'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (52,(SELECT idUtente FROM Utenti WHERE Utente ='Giampiero Mazzocchi'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (53,(SELECT idUtente FROM Utenti WHERE Utente ='Catia Zumpano'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (54,(SELECT idUtente FROM Utenti WHERE Utente ='Concetta Cardillo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (55,(SELECT idUtente FROM Utenti WHERE Utente ='Maria Luisa Scalvedi'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (56,(SELECT idUtente FROM Utenti WHERE Utente ='Maria Carmela Macrì'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (57,(SELECT idUtente FROM Utenti WHERE Utente ='Maria Valentina Lasorella'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (58,(SELECT idUtente FROM Utenti WHERE Utente ='Roberta Sardone'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (59,(SELECT idUtente FROM Utenti WHERE Utente ='Andrea Cutini'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (60,(SELECT idUtente FROM Utenti WHERE Utente ='Barbara Zanetti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (60,(SELECT idUtente FROM Utenti WHERE Utente ='Francesco Licciardo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (61,(SELECT idUtente FROM Utenti WHERE Utente ='Sabrina Giuca'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (62,(SELECT idUtente FROM Utenti WHERE Utente ='Tatiana Castellotti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (62,(SELECT idUtente FROM Utenti WHERE Utente ='Francesco Licciardo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (63,(SELECT idUtente FROM Utenti WHERE Utente ='Grazia Valentino'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (63,(SELECT idUtente FROM Utenti WHERE Utente ='Lucia Tudini'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (64,(SELECT idUtente FROM Utenti WHERE Utente ='Flora De Natale'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (65,(SELECT idUtente FROM Utenti WHERE Utente ='Corrado Ciaccia'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (66,(SELECT idUtente FROM Utenti WHERE Utente ='Lucia Briamonte'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (67,(SELECT idUtente FROM Utenti WHERE Utente ='Federica Cisilino'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (67,(SELECT idUtente FROM Utenti WHERE Utente ='Francesco Licciardo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (68,(SELECT idUtente FROM Utenti WHERE Utente ='Maria Carmela Macrì'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (68,(SELECT idUtente FROM Utenti WHERE Utente ='Manuela Scornaienghi'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (69,(SELECT idUtente FROM Utenti WHERE Utente ='Antonio Papaleo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (69,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Bortolotti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (70,(SELECT idUtente FROM Utenti WHERE Utente ='Danilo Marandola'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (71,(SELECT idUtente FROM Utenti WHERE Utente ='Barbara Parisse'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (72,(SELECT idUtente FROM Utenti WHERE Utente ='Teresa Lettieri'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (73,(SELECT idUtente FROM Utenti WHERE Utente ='Alessandra Pesce'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (74,(SELECT idUtente FROM Utenti WHERE Utente ='Saverio Maluccio'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (75,(SELECT idUtente FROM Utenti WHERE Utente ='Alessandro Paletto'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (75,(SELECT idUtente FROM Utenti WHERE Utente ='Daniele Giordano'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (76,(SELECT idUtente FROM Utenti WHERE Utente ='Sara Bergante'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (77,(SELECT idUtente FROM Utenti WHERE Utente ='Chiara Epifani'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (78,(SELECT idUtente FROM Utenti WHERE Utente ='Giuseppe Pignatti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (79,(SELECT idUtente FROM Utenti WHERE Utente ='Giovanni Dara Guccione'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (79,(SELECT idUtente FROM Utenti WHERE Utente ='Maria Fantappiè'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (79,(SELECT idUtente FROM Utenti WHERE Utente ='Roberto Barbetti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (80,(SELECT idUtente FROM Utenti WHERE Utente ='Raffaella Pergamo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (81,(SELECT idUtente FROM Utenti WHERE Utente ='Raffaella Pergamo'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (82,(SELECT idUtente FROM Utenti WHERE Utente ='Giovanni Dara Guccione'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (83,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Viganò'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (83,(SELECT idUtente FROM Utenti WHERE Utente ='Alessandra Vaccaro'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (84,(SELECT idUtente FROM Utenti WHERE Utente ='Antonella Trisorio'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (85,(SELECT idUtente FROM Utenti WHERE Utente ='Roberta Ciaravino'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (85,(SELECT idUtente FROM Utenti WHERE Utente ='Gabriella Ricciardi'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (86,(SELECT idUtente FROM Utenti WHERE Utente ='Raffaella Di Napoli'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (86,(SELECT idUtente FROM Utenti WHERE Utente ='Roberto Cagliero'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (87,(SELECT idUtente FROM Utenti WHERE Utente ='Filippo Chiozzotto'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (87,(SELECT idUtente FROM Utenti WHERE Utente ='Emilia Reda'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (88,(SELECT idUtente FROM Utenti WHERE Utente ='Catia Zumpano'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (89,(SELECT idUtente FROM Utenti WHERE Utente ='Annalisa Del Prete'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (90,(SELECT idUtente FROM Utenti WHERE Utente ='Giampiero Mazzocchi'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (90,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Giarè'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (91,(SELECT idUtente FROM Utenti WHERE Utente ='Daniela Storti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (92,(SELECT idUtente FROM Utenti WHERE Utente ='Patrizia Borsotto'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (92,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Giarè'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (93,(SELECT idUtente FROM Utenti WHERE Utente ='Davide Longhitano'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (94,(SELECT idUtente FROM Utenti WHERE Utente ='Rosa Rivieccio'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (95,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Viganò'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (95,(SELECT idUtente FROM Utenti WHERE Utente ='Andrea Arzeni'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (95,(SELECT idUtente FROM Utenti WHERE Utente ='Alberto Sturla'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (96,(SELECT idUtente FROM Utenti WHERE Utente ='Rossella Ugati'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (96,(SELECT idUtente FROM Utenti WHERE Utente ='Patrizia Borsotto'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (97,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Giarè'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (97,(SELECT idUtente FROM Utenti WHERE Utente ='Anna Vagnozzi'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (98,(SELECT idUtente FROM Utenti WHERE Utente ='Paola Lionetti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (99,(SELECT idUtente FROM Utenti WHERE Utente ='Daniela Storti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (100,(SELECT idUtente FROM Utenti WHERE Utente ='Piermaria Corona'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (101,(SELECT idUtente FROM Utenti WHERE Utente ='Mara Lai'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (101,(SELECT idUtente FROM Utenti WHERE Utente ='Andrea Bonfiglio'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (102,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Varia'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (103,(SELECT idUtente FROM Utenti WHERE Utente ='Paolo Menesatti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (103,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Antonucci'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (104,(SELECT idUtente FROM Utenti WHERE Utente ='Patrizia Proietti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (105,(SELECT idUtente FROM Utenti WHERE Utente ='Mario Cariello'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (106,(SELECT idUtente FROM Utenti WHERE Utente ='Serena Tarangioli'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (107,(SELECT idUtente FROM Utenti WHERE Utente ='Barbara Zanetti'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (108,(SELECT idUtente FROM Utenti WHERE Utente ='Patrizia Borsotto'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (108,(SELECT idUtente FROM Utenti WHERE Utente ='Milena Verrascina'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (108,(SELECT idUtente FROM Utenti WHERE Utente ='Roberto Cagliero'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (109,(SELECT idUtente FROM Utenti WHERE Utente ='Milena Verrascina'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (110,(SELECT idUtente FROM Utenti WHERE Utente ='Milena Verrascina'))
+--INSERT INTO [UtentiProgettoEnte] ([idProgetto],[idUtente]) VALUES (111,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Viganò'))
+
+SELECT * FROM Utenti
+--INSERT INTO [UtentiSchedaEnte] ([idScheda],[idUtente]) VALUES (8,(SELECT idUtente FROM Utenti WHERE Utente ='Serena Tarangioli'))
+--INSERT INTO [UtentiSchedaEnte] ([idScheda],[idUtente]) VALUES (9,(SELECT idUtente FROM Utenti WHERE Utente ='Roberto Cagliero '))
+--INSERT INTO [UtentiSchedaEnte] ([idScheda],[idUtente]) VALUES (10,(SELECT idUtente FROM Utenti WHERE Utente ='Milena Verrascina'))
+--INSERT INTO [UtentiSchedaEnte] ([idScheda],[idUtente]) VALUES (11,(SELECT idUtente FROM Utenti WHERE Utente ='Raoul Romano'))
+--iNSERT INTO [UtentiSchedaEnte] ([idScheda],[idUtente]) VALUES (12,(SELECT idUtente FROM Utenti WHERE Utente ='Raffaella Di Napoli'))
+--INSERT INTO [UtentiSchedaEnte] ([idScheda],[idUtente]) VALUES (13,(SELECT idUtente FROM Utenti WHERE Utente ='Simona Cristiano'))
+--INSERT INTO [UtentiSchedaEnte] ([idScheda],[idUtente]) VALUES (14,(SELECT idUtente FROM Utenti WHERE Utente ='Serena Tarangioli'))
+SELECT * FROM UtentiProgettoMinistero
+---
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (33,(SELECT idUtente FROM Utenti WHERE Utente ='Riccardo Meo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (34,(SELECT idUtente FROM Utenti WHERE Utente ='Luna Kappler'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (35,(SELECT idUtente FROM Utenti WHERE Utente ='Luna Kappler'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (36,(SELECT idUtente FROM Utenti WHERE Utente ='Paolo Ammassari'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (37,(SELECT idUtente FROM Utenti WHERE Utente ='Veronica Granata'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (38,(SELECT idUtente FROM Utenti WHERE Utente ='Consiglia Arena'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (39,(SELECT idUtente FROM Utenti WHERE Utente ='Salvatore Viscardi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (40,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Panico'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (41,(SELECT idUtente FROM Utenti WHERE Utente ='Silvia Ferlazzo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (41,(SELECT idUtente FROM Utenti WHERE Utente ='Sara Piloni'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (42,(SELECT idUtente FROM Utenti WHERE Utente ='Veronica Granata'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (43,(SELECT idUtente FROM Utenti WHERE Utente ='Silvia Ferlazzo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (43,(SELECT idUtente FROM Utenti WHERE Utente ='Sara Piloni'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (44,(SELECT idUtente FROM Utenti WHERE Utente ='Salvatore Viscardi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (45,(SELECT idUtente FROM Utenti WHERE Utente ='Marco Pellegrini'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (46,(SELECT idUtente FROM Utenti WHERE Utente ='Riccardo Meo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (47,(SELECT idUtente FROM Utenti WHERE Utente ='Consiglia Arena'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (48,(SELECT idUtente FROM Utenti WHERE Utente ='Enrico Guidi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (49,(SELECT idUtente FROM Utenti WHERE Utente ='Luna Kappler'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (50,(SELECT idUtente FROM Utenti WHERE Utente ='Riccardo Rossi Paccani'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (51,(SELECT idUtente FROM Utenti WHERE Utente ='Antonio Frattarelli'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (52,(SELECT idUtente FROM Utenti WHERE Utente ='Consiglia Arena'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (53,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Panico'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (54,(SELECT idUtente FROM Utenti WHERE Utente ='Riccardo Rossi Paccani'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (55,(SELECT idUtente FROM Utenti WHERE Utente ='Anna Maria Di Ciolla'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (56,(SELECT idUtente FROM Utenti WHERE Utente ='Enrico Guidi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (57,(SELECT idUtente FROM Utenti WHERE Utente ='Attilio Tonolo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (58,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Panico'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (59,(SELECT idUtente FROM Utenti WHERE Utente ='Alberto Manzo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (60,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Giantomasi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (61,(SELECT idUtente FROM Utenti WHERE Utente ='Michela Conti'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (62,(SELECT idUtente FROM Utenti WHERE Utente ='Veronica Granata'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (63,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Giantomasi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (64,(SELECT idUtente FROM Utenti WHERE Utente ='Antonio Frattarelli'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (65,(SELECT idUtente FROM Utenti WHERE Utente ='Vincenzo Montalbano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (66,(SELECT idUtente FROM Utenti WHERE Utente ='Consiglia Arena'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (67,(SELECT idUtente FROM Utenti WHERE Utente ='Veronica Granata'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (68,(SELECT idUtente FROM Utenti WHERE Utente ='Annunziata Maria Gangemi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (69,(SELECT idUtente FROM Utenti WHERE Utente ='Riccardo Rossi Paccani'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (70,(SELECT idUtente FROM Utenti WHERE Utente ='Vincenzo Montalbano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (71,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (72,(SELECT idUtente FROM Utenti WHERE Utente ='Vincenzo Montalbano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (73,(SELECT idUtente FROM Utenti WHERE Utente ='Antonio Frattarelli'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (74,(SELECT idUtente FROM Utenti WHERE Utente ='Sara Piloni'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (75,(SELECT idUtente FROM Utenti WHERE Utente ='Silvia Ferlazzo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (76,(SELECT idUtente FROM Utenti WHERE Utente ='Immacolata Librandi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (77,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (78,(SELECT idUtente FROM Utenti WHERE Utente ='Immacolata Librandi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (79,(SELECT idUtente FROM Utenti WHERE Utente ='Vincenzo Montalbano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (80,(SELECT idUtente FROM Utenti WHERE Utente ='Annunziata Maria Gangemi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (81,(SELECT idUtente FROM Utenti WHERE Utente ='Francesca Coniglio'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (82,(SELECT idUtente FROM Utenti WHERE Utente ='Antonio Frattarelli'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (83,(SELECT idUtente FROM Utenti WHERE Utente ='Giuseppe Di Renzo'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (84,(SELECT idUtente FROM Utenti WHERE Utente ='Vincenzo Montalbano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (85,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Panico'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (86,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Panico'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (87,(SELECT idUtente FROM Utenti WHERE Utente ='Consiglia Arena'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (88,(SELECT idUtente FROM Utenti WHERE Utente ='Salvatore Viscardi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (89,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (90,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Panico'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (91,(SELECT idUtente FROM Utenti WHERE Utente ='Salvatore Viscardi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (92,(SELECT idUtente FROM Utenti WHERE Utente ='Laura Panico'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (93,(SELECT idUtente FROM Utenti WHERE Utente ='Riccardo Rossi Paccani'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (94,(SELECT idUtente FROM Utenti WHERE Utente ='Giuseppe Cottignoli'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (95,(SELECT idUtente FROM Utenti WHERE Utente ='Paolo Valdarchi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (96,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (97,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (98,(SELECT idUtente FROM Utenti WHERE Utente ='Paolo Ammassari'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (99,(SELECT idUtente FROM Utenti WHERE Utente ='Salvatore Viscardi'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (100,(SELECT idUtente FROM Utenti WHERE Utente ='Sara Piloni'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (101,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (102,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (103,(SELECT idUtente FROM Utenti WHERE Utente ='Sara Piloni'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (104,(SELECT idUtente FROM Utenti WHERE Utente ='Pasquale Falzarano'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (105,(SELECT idUtente FROM Utenti WHERE Utente ='Paolo Ammassari'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (106,(SELECT idUtente FROM Utenti WHERE Utente ='Paolo Ammassari'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (107,(SELECT idUtente FROM Utenti WHERE Utente ='Paola Gonnelli'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (108,(SELECT idUtente FROM Utenti WHERE Utente ='Paola Gonnelli'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (109,(SELECT idUtente FROM Utenti WHERE Utente ='Veronica Granata'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (110,(SELECT idUtente FROM Utenti WHERE Utente ='Veronica Granata'));
+--INSERT INTO UtentiProgettoMinistero (idProgetto,idUtente) VALUES (111,(SELECT idUtente FROM Utenti WHERE Utente ='Veronica Granata'));
+
+
+---- TIPOOUTPUT
+---- nessun inserimento, tutte le voci sono già presenti in tabella
+
+---- TEMA inserimento voci mancanti
+--INSERT INTO Temi(tema,CodTema) VALUES('Benessere animale','16')
+--INSERT INTO Temi(tema,CodTema) VALUES('Coordinamento Aiuti di Stato','04')
+--INSERT INTO Temi(tema,CodTema) VALUES('Coordinamento AKIS e supporto alla promozione dell’innovazione anche attraverso il monitoraggio/revisione della strategia di Innovazione e ricerca','12')
+--INSERT INTO Temi(tema,CodTema) VALUES('Foreste','15')
+--INSERT INTO Temi(tema,CodTema) VALUES('Leader','11')
+--INSERT INTO Temi(tema,CodTema) VALUES('Sviluppo territoriale (Bul, Aree interne, Aree rurali, Sviluppo locale, Vincoli, Aree svantaggiate)','17')
+
+---- INSERIMENO OUTPUT preparato da EXCEL
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('33','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','DOC','CR01.01_DOC_01','Documenti ','Rapporto sullo stato di avanzamento del PSP',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('33','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','ASC','CR01.01_ASC_02','Attività di supporto e consulenza','Attività di supporto e consulenza ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('33','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','CSV','CR01.01_CSV_03','Convegno/Seminario/Videoconferenza ','Seminari, eventi specifici:
+
+-- - Incontro annuale 2025 (luglio 2025) ',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('34','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','LGU','CR01.02_LGU_01','Linea Guida','Linea guida Open PAC',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('34','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','DOC','CR01.02_DOC_02','Documenti ','1 Documento di analisi sui fabbisogni per lo sviluppo di dashboard SMP
+--3 Documenti tecnici per la programmazione e giustificazione del valore dei milestone e target (1 per anno)
+--2 Documenti di analisi sull’attuazione regionalizzata degli obiettivi specifici nel contesto del NDM',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('34','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','POL','CR01.02_POL_03','Piattaforma online','Progettazione, sviluppo, gestione di un portale multimediale e relativa guida, con strutturazione dei dati regionalizzati dell’attuazione.',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('34','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','BDT','CR01.02_BDT_04','Banca dati','Banca dati APR
+--Banca dati monitoraggio procedurale funzionale ai Comitati di monitoraggio e riunione annuale di riesame (3 aggiornamenti)
+--Banca dati Milestone del PSP (3 aggiornamenti)',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('34','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','ASC','CR01.02_ASC_05','Attività di supporto e consulenza','Supporto e consulenza',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('35','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','WFG','CR01.03_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Incontri di coordinamento rivolti ai principali stakeholders in materia di valutazione, su temi, approcci, dati, che favoriscano lo scambio di esperienze e la condivisione di approcci e strumenti tra amministrazioni.  ',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('35','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','DOC','CR01.03_DOC_02','Documenti ','Studio di fattibilità indicatori VAS  
+--Documentazione di indirizzo e supporto dei processi valutativi ',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('35','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','POL','CR01.03_POL_03','Piattaforma online','Piattaforma online: progettazione, sviluppo, gestione e implementazione di strumenti web, comprese newsletter, pagine web, social network, forum e FAQ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('35','01','06','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','ASC','CR01.03_ASC_04','Attività di supporto e consulenza','Supporto e consulenza alle AdG del PSP',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('36','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','05','ASC','CR01.04_ASC_01','Attività di supporto e consulenza','Supporto e consulenza alle AdG Rete PAC, PSP, CSR',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('36','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','05','DOC','CR01.04_DOC_02','Documenti ','Documenti di policy (Programma, Piano di azione, Piano di Comunicazione)',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('36','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','05','LGU','CR01.04_LGU_03','Linea Guida','Linee guida “Comunicazione”',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('36','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','05','POL','CR01.04_POL_04','Piattaforma online','Piattaforma online: strategia transizione da RRN a Rete PAC e implementazione sezioni di competenza',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('37','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','04','LGU','CR01.05_LGU_01','Linea Guida','Linea guida',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('37','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','04','BDT','CR01.05_BDT_02','Banca dati','Banca dati Aiuti di Stato',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('37','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','04','ASC','CR01.05_ASC_03','Attività di supporto e consulenza','Supporto e consulenza alle AdG del PSP',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('38','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','05','ASC','CR01.06_ASC_01','Attività di supporto e consulenza','Supporto e consulenza alle AdG del PSP',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('39','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','POL','CR01.07_POL_01','Piattaforma online','Piattaforma',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('39','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','07','BDT','CR01.07_BDT_02','Banca dati','Banca dati bandi CSR ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('40','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','11','WFG','CR01.08_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Workshop
+--Webinar “LEADER 23-27: attuazione, monitoraggio e prossimi adempimenti”, che si terrà, sulla piattaforma (23/05/25) ',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('40','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','11','LGU','CR01.08_LGU_02','Linea Guida','Linee guida per scambio di buone pratiche per l’implementazione e gestione di leader a livello regionale e locale',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('40','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','11','DOC','CR01.08_DOC_03','Documenti ','Documenti per scambio di buone pratiche per l’implementazione e gestione di leader a livello regionale e locale',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('40','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','11','POL','CR01.08_POL_04','Piattaforma online','Area portale Reteleader per scambio di buone pratiche per l’implementazione e gestione di leader a livello regionale e locale',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('40','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','11','BDT','CR01.08_BDT_05','Banca dati','Banca dati sullo scambio di buone pratiche per l’implementazione e gestione di leader a livello regionale e locale',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('40','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','11','ASC','CR01.08_ASC_06','Attività di supporto e consulenza','Supporto e consulenza alle AdG del PSP',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('41','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','ASC','CR01.09_ASC_01','Attività di supporto e consulenza','Supporto e consulenza alle AdG del PSP',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('41','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','WFG','CR01.09_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Stato di attuazione interventi forestali PSP (marzo 2025) 
+
+--Finanziamenti Ass. Fondiario (marzo 2025)
+
+--Pianificazione forestale (maggio 2025) 
+
+--Boschi vetusti (settembre 2025) 
+
+--Strategia forestale e Fondo Foreste (novembre 2025)  
+
+--Associazionismo forestale (febbraio 2026) 
+
+--FOR ITALY (Maggio 2026)',7,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('42','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','20','WFG','CR01.10_WFG_01','Workshop/Focus Group/Tavoli di discussione ','1 Good Practice Workshop “Exploring the potential of simulation models for assessing the CAP” (Aprile 2025) 
+
+--2 Eventi di Capacity Building 
+
+--3 Eventi a livello territoriale',6,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('42','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','20','MPP','CR01.10_MPP_02','Materiale promozionale/pubblicazioni','Materiali divulgativi',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('42','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','20','POL','CR01.10_POL_03','Piattaforma online','Pagina web dedicata alla Rete PAC UE con descrizione governance rete, informazioni generali e link alle altre pagine tematiche (innovazione, valutazione, leader, ecc.)',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('43','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','CSV','CR01.11_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('43','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','WFG','CR01.11_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('43','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','DOC','CR01.11_DOC_03','Documenti ','Documenti di analisi',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('43','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','STM','CR01.11_STM_04','Strumenti multimediali','Video/podcast',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('43','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','MPP','CR01.11_MPP_05','Materiale promozionale/pubblicazioni','Materiali divulgativi',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('43','01','03','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','POL','CR01.11_POL_06','Piattaforma online','Area portale rete dedicata',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('44','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','17','DOC','CR01.12_DOC_01','Documenti ','Documento metodologico',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('44','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','17','BDT','CR01.12_BDT_02','Banca dati','Banca dati indicatori per la definizione delle aree',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('44','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','17','ASC','CR01.12_ASC_03','Attività di supporto e consulenza','Attività di supporto e consulenza ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('45','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','18','DOC','CR01.13_DOC_01','Documenti ','Analisi della filiera  
+
+--Report su studi preliminari a nuova impostazione Interventi per apicoltura',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('45','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','18','ASC','CR01.13_ASC_02','Attività di supporto e consulenza','Partecipazione a Tavoli di filiera e Comitato di indirizzo e monitoraggio',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('45','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','18','CSV','CR01.13_CSV_03','Convegno/Seminario/Videoconferenza ','Organizzazione Convegno sulla filiera apistica. Partecipazione a convegni nazionali, internazionali e sul territorio per rappresentare i risultati dell’analisi. Incontri tecnici con stakeholder',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('45','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','18','MPP','CR01.13_MPP_04','Materiale promozionale/pubblicazioni','Report sull’analisi della sostenibilità economica e sociale legata alla filiera apistica  
+
+--Fact sheet di aggiornamento sulle rilevazioni di costi di produzione',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('45','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarità fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea
+--Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','18','BDT','CR01.13_BDT_05','Banca dati','Implementazione e aggiornamento del DB relativo alle indagini sulla rilevazione dei costi di produzione',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('46','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coerenza e complementarietà fra I e II pilastro
+--Complementarità ed Integrazione con i fondi SIEe con altri strumenti finanziari dell’Unione europea ','01','ASC','CR02.01_ASC_01','Attività di supporto e consulenza','Supporto all’adozione di metodologie e modelli a seconda del fabbisogno di analisi e valutazione emergente',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('46','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coerenza e complementarietà fra I e II pilastro
+--Complementarità ed Integrazione con i fondi SIEe con altri strumenti finanziari dell’Unione europea ','01','CSV','CR02.01_CSV_02','Convegno/Seminario/Videoconferenza ','Riflessioni sul futuro della PAC',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('46','01','02','Supporto alle Amministrazioni e gli altri attori coinvolti su tematiche strategiche
+--Coerenza e complementarietà fra I e II pilastro
+--Complementarità ed Integrazione con i fondi SIEe con altri strumenti finanziari dell’Unione europea ','01','DOC','CR02.01_DOC_03','Documenti ','Ricognizione sulle posizioni degli Stati Membri in merito al bilancio e all’allargamento;
+--Documento sulla futura PAC;
+--Documento con i risultati di simulazioni su scenari ipotetici',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('47','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','CSV','CR02.02_CSV_01','Convegno/Seminario/Videoconferenza ','Seminario di carattere divulgativo finalizzato alla formazione di soggetti a vario titolo interessati ai temi della sostenibilità (studenti, agricoltori, operatori del settore e del territorio, attori della food chain)',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('47','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','WFG','CR02.02_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Focus group finalizzato alla costruzione di indicatori di sostenibilità funzionali alla bussola',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('47','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','MPP','CR02.02_MPP_03','Materiale promozionale/pubblicazioni','Brochure interattive e infografiche di facile consultazione e diffusione finalizzate alla sensibilizzazione sui temi della sostenibilità',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('47','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','POL','CR02.02_POL_04','Piattaforma online','Creazione di una piattaforma online contenente la bussola costantemente aggiornata per consentire un monitoraggio della sostenibilità in Italia',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('47','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','BDT','CR02.02_BDT_05','Banca dati','Banca dati degli indicatori di sostenibilità presenti in piattaforma che alimentano la bussola  ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('48','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','22','CSV','CR02.03_CSV_01','Convegno/Seminario/Videoconferenza ','Seminario',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('48','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','22','WFG','CR02.03_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Focus group',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('48','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','22','DOC','CR02.03_DOC_03','Documenti ','Documento di analisi e di indicazioni di policy',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('48','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','22','STM','CR02.03_STM_04','Strumenti multimediali','Podcast',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('49','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','DOC','CR02.04_DOC_01','Documenti ','Report di analisi su metodi e strumenti di valutazione, comunicazione e follow-up dei risultati delle valutazioni, emergenti dal repository',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('49','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','STM','CR02.04_STM_02','Strumenti multimediali','3 Infografiche
+--2 Podcast',5,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('49','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','POL','CR02.04_POL_03','Piattaforma online','1 piattaforma con servizi IA integrati (con almeno un aggiornamento l’anno) e digital communication sui social media per la pubblicità agli output di progetto ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('49','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','PHC','CR02.04_PHC_04','Progetto ad hoc','Scambio di dati e informazioni con altre piattaforme e, in particolare, con l’Evaluation Knowledge Bank dell’European Evaluation Helpdesk',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('50','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','CSV','CR02.05_CSV_01','Convegno/Seminario/Videoconferenza ','Seminari su tematiche di interesse relative agli scenari internazionali',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('50','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','DOC','CR02.05_DOC_02','Documenti ','Documenti di ricerca/analisi inclusi report di elaborazione dati
+--- Report scambi commerciali USA',5,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('50','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','DOC','CR02.05_DOC_03','Documenti ','Documenti divulgativi e comunicati stampa all’anno su tematiche di attualità e congiuntura internazionale',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('50','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','BDT','CR02.05_BDT_04','Banca dati','Banca dati per integrare microdati inerenti al commercio internazionale con quelli riguardanti le caratteristiche strutturali delle aziende importatrici/esportatrici, utili all’analisi degli scenari internazionali',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('50','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','ASC','CR02.05_ASC_05','Attività di supporto e consulenza','Supporto all’ADG del PSP',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('51','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','CSV','CR02.06_CSV_01','Convegno/Seminario/Videoconferenza ','Seminari:
+--Valutazione ecoschemi;
+--Scenari di sviluppo bio;
+--Tema da individuare',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('51','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','WFG','CR02.06_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Tavoli di per confronto tra i vari gruppi di lavoro e scambio di informazioni (gruppi RRN, altri enti di ricerca, stakeholders)',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('51','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','DOC','CR02.06_DOC_03','Documenti ','Documenti:
+--Valutazione ecoschemi
+--Scenari di sviluppo bio
+--Tema da individuare',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('51','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','BDT','CR02.06_BDT_04','Banca dati','Creazione di Banche dati basate sulle survey e integrazione con banche dati esistenti',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('51','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','03','ASC','CR02.06_ASC_05','Attività di supporto e consulenza','Supporto e consulenza AdG PSP',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('52','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','06','LGU','CR02.07_LGU_01','Linea Guida','Manuale di orientamento tra le varie metodologie di analisi delle politiche agricole',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('52','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','06','POL','CR02.07_POL_02','Piattaforma online','Pagine social dedicate al progetto, per la disseminazione al largo pubblico',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('52','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','06','DOC','CR02.07_DOC_03','Documenti ','Valutazione zone svantaggiate;  
+--Valutazione pagamenti diretti;  
+--Valutazione Parco agrisolare;  
+--Documento di analisi di raccolta di metodi innovativi',4,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('52','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','06','ASC','CR02.07_ASC_04','Attività di supporto e consulenza','Supporto all’adozione di metodologie e modelli a seconda del fabbisogno di analisi e valutazione emergente',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('52','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','06','WFG','CR02.07_WFG_05','Workshop/Focus Group/Tavoli di discussione ','Eventi formativi',12,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('52','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','06','LGU','CR02.07_LGU_06','Linea Guida','Linea guida formazione',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('52','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','06','TFG','CR02.07_TFG_07','Task force on Demand/Gruppo di lavoro','Gruppo di lavoro tematico con esperti',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('53','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','DOC','CR02.08_DOC_01','Documenti ','Documenti di ricerca',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('53','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','CSV','CR02.08_CSV_02','Convegno/Seminario/Videoconferenza ','1 Incontro internazionale su gender-sensitivity approach e sviluppo rurale 
+
+--2 eventi su scala regionale, su strumenti e approcci di genere applicabili ai CSR',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('53','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','WFG','CR02.08_WFG_03','Workshop/Focus Group/Tavoli di discussione ','Focus Group/Workshop con rappresentanze femminili di categoria e di settore e con istituzioni nazionali e regionali',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('53','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','SRE','CR02.08_SRE_04','Studi e report','“Gender equality nei PSP europei: risultati di una analisi comparativa” 
+
+--“Empowerment: la partecipazione delle donne ai processi di governance delle politiche agricole e territoriali” 
+
+--“Strumenti di valutazione in ottica di genere a supporto della politica agricola e di sviluppo rurale”',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('53','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','MPP','CR02.08_MPP_05','Materiale promozionale/pubblicazioni','Opuscolo divulgativo con infografiche sulla partecipazione delle donne alle politiche agricole',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('53','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','POL','CR02.08_POL_06','Piattaforma online','Aggiornamento e potenziamento della pagina web dedicata alla parità di genere sul sito della RRN',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('53','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','01','ASC','CR02.08_ASC_07','Attività di supporto e consulenza','Supporto on demand alle Autorità di Gestione sui temi della parità di genere nel PSP e nei CSR',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('54','01','03','','08','CSV','CR03.01_CSV_01','Convegno/Seminario/Videoconferenza ','Organizzazione di un evento finale per la divulgazione dei risultati delle attività',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('54','01','03','','08','DOC','CR03.01_DOC_02','Documenti ','Report finalizzato ad individuare i profeli imprenditoriali prevalenti all''interno delle diverse aree territoriali',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('54','01','03','','08','BDT','CR03.01_BDT_03','Banca dati','Creazione di un database a partire da una selezione e riorganizzazione delle variabili censuarie eventualmente collegabile ad ulteriori dataset disponibili',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('55','01','05','','08','POL','CR03.02_POL_01','Piattaforma online','Sviluppo sito web informativo sulle normative, studi, iniziative e buone pratiche, linee guida, strumenti di prevenzione dello spreco alimentare individuati e sviluppati nell''ambito del progetto',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('55','01','05','','08','CSV','CR03.02_CSV_02','Convegno/Seminario/Videoconferenza ','Convegno per incrementare scambi di conoscenza e azioni comuni tra operatori del settore, attori economici locali, istituzioni, associazioni del terzo settore; in ambito di consumo, un convegno di informazione e  sensibilizzazione pubblica',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('55','01','05','','08','MPP','CR03.02_MPP_03','Materiale promozionale/pubblicazioni','Produzione di materiale promozionale, quali pubblicazioni, brochure, e documenti divulgativi per la disseminazione e informazione delle linee guida in ambito agricolo, della ristorazione scolastica e a livello domestico',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('55','01','05','','08','LGU','CR03.02_LGU_04','Linea Guida','Redazione di due linee guida per la prevenzione dello spreco alimentare: in fase di produzione agricola e anche nella fase di consumo sia in ambito di ristorazione scolastica e che a livello domestico',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('55','01','05','','08','DOC','CR03.02_DOC_05','Documenti ','Rapporto finale che raccoglie azioni e risultati realizzati nel corso del progetto',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('56','01','05','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','22','CSV','CR03.03_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('56','01','05','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','22','WFG','CR03.03_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop',6,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('56','01','05','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','22','STV','CR03.03_STV_03','Study visit','Study visit',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('56','01','05','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','22','SRE','CR03.03_SRE_04','Studi e report','Rapporto sulle politiche per le pari opportunità nel mercato del lavoro agricolo ',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('56','01','05','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','22','BDT','CR03.03_BDT_05','Banca dati','',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('57','01','03','','18','CSV','CR03.04_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno internazionale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('57','01','03','','18','WFG','CR03.04_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Focus group/workshop',4,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('57','01','03','','18','SRE','CR03.04_SRE_03','Studi e report','Report sulle filiere agro-energetiche',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('57','01','03','','18','STM','CR03.04_STM_04','Strumenti multimediali','Visita agli impianti e realizzazione di video divulgativi. Realizzazione sulla piattaforma My maps google mappa impianti di digestione anaerobica',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('57','01','03','','18','POL','CR03.04_POL_05','Piattaforma online','Realizzazione sezione Agroenergie sul sito della RRN – PAC e piattaforma RIF',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('58','01','03','','19','CSV','CR03.05_CSV_01','Convegno/Seminario/Videoconferenza ','Organizzazione di un evento finale per la divulgazione dei risultati delle attività',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('58','01','03','','19','WFG','CR03.05_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Organizzazione di momenti di incontro tra operatori del settore, attori economici locali, cittadini e istituzioni, finalizzati a incrementare lo scambio di conoscenza, con un approccio di rete.',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('58','01','03','','19','DOC','CR03.05_DOC_03','Documenti ','Documenti intermedi e di un Report finale di restituzione dei risultati dell''attività di studio e di confronto sul territorio. ',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('58','01','03','','19','STM','CR03.05_STM_04','Strumenti multimediali','Strumenti di comunicazione utili allo svolgimento di indagini qualitative sul campo, finalizzate alla conoscenza delle specificità territoriali e degli attori coinvolti.',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('58','01','03','','19','BDT','CR03.05_BDT_05','Banca dati','Banca dati utile allo sviluppo della componente quantitativa delle analisi di approfondimento. I dati di base saranno reperiti, sia facendo riferimento a database già esistenti, che tramite una raccolta dati mirata a disporre di indicatori selezionati per i territori di indagine.',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('59','01','05','','18','WFG','CR03.06_WFG_01','Workshop/Focus Group/Tavoli di discussione ','a-Quali indicatori per il monitoraggio della filiera sughericola. b-Il ruolo dei nuovi imboschimenti nel rafforzamento della sughericoltura',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('59','01','05','','18','STV','CR03.06_STV_02','Study visit','Visita a casi di studio di impianti di sughera realizzati con CEE Regg. 2080/92 e 1257/99 in Sardegna',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('59','01','05','','18','DOC','CR03.06_DOC_03','Documenti ','a-Analisi delle criticità e proposte per il monitoraggio del settore sughericolo b-Analisi dei risultati di impianti di sughera realizzati con CEE Regg. 2080/92 e 1257/99 e indicazioni per la realizzazione di nuovi imboschimenti naturaliformi.',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('59','01','05','','18','ASC','CR03.06_ASC_04','Attività di supporto e consulenza','Supporto all’attuazione degli interventi PSP rivolto alla promozione della sughericoltura',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('60','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','13','MPP','CR03.07_MPP_01','Materiale promozionale/pubblicazioni','Brochure ',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('60','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','13','STM','CR03.07_STM_05','Strumenti multimediali','Video',6,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('61','01','05','Miglioramento competenze tecnico-professionali
+--','09','CSV','CR03.08_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('61','01','05','Miglioramento competenze tecnico-professionali
+--','09','WFG','CR03.08_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Confronto con esperti (associazioni di categoria, rappresentanti delle filiere, ecc.).  ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('61','01','05','Miglioramento competenze tecnico-professionali
+--','09','SRE','CR03.08_SRE_03','Studi e report','Rapporto di ricerca ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('62','01','06','Miglioramento competenze tecnico-professionali
+--','08','CSV','CR03.09_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno finale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('62','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','08','WFG','CR03.09_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop per discussione con attori',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('62','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','08','DOC','CR03.09_DOC_03','Documenti ','Documenti di analisi e studi e report di approfondimento tematico e elaborazione dati:
+--1. Rapporto sul ruolo dell’industria alimentare e delle bevande nel Made in Italy agroalimentare e posizione delle regioni',5,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('62','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','08','STM','CR03.09_STM_04','Strumenti multimediali','Video',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('62','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','08','MPP','CR03.09_MPP_05','Materiale promozionale/pubblicazioni','Documenti divulgativi',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('63','01','05','Miglioramento competenze tecnico-professionali
+--','18','CSV','CR03.10_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno di carattere divulgativo e informativo',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('63','01','05','Miglioramento competenze tecnico-professionali
+--','18','WFG','CR03.10_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Momenti interattivi di approfondimento tecnico dedicati ad un gruppo ristretto di destinatari per lo scambio e la condivisione di esperienze',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('63','01','05','Miglioramento competenze tecnico-professionali
+--','18','DOC','CR03.10_DOC_03','Documenti ','Rapporto di analisi su “Le imprese agricole al femminile. I risultati dell’indagine”  ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('63','01','05','Miglioramento competenze tecnico-professionali
+--','18','BDT','CR03.10_BDT_04','Banca dati','Banca dati',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('64','01','05','Miglioramento competenze tecnico-professionali
+--','08','WFG','CR03.11_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Convegni ',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('64','01','05','Miglioramento competenze tecnico-professionali
+--','08','LGU','CR03.11_LGU_02','Linea Guida','Linee guida',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('64','01','05','Miglioramento competenze tecnico-professionali
+--','08','DOC','CR03.11_DOC_03','Documenti ','Documenti di analisi',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('64','01','05','Miglioramento competenze tecnico-professionali
+--','08','BDT','CR03.11_BDT_04','Banca dati','Banca dati',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('65','01','01','Scambio di esperienze tra portatori di interesse
+--Risoluzione di problematiche comuni
+--','08','MPP','CR03.12_MPP_01','Materiale promozionale/pubblicazioni','Materiali divulgativi',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('65','01','01','Scambio di esperienze tra portatori di interesse
+--Risoluzione di problematiche comuni
+--','08','STM','CR03.12_STM_02','Strumenti multimediali','Video',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('66','01','01','Scambio di esperienze tra portatori di interesse
+--Risoluzione di problematiche comuni
+--','18','CSV','CR03.13_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('66','01','01','Scambio di esperienze tra portatori di interesse
+--Risoluzione di problematiche comuni
+--','18','WFG','CR03.13_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Incontro con i distretti del cibo',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('66','01','01','Scambio di esperienze tra portatori di interesse
+--Risoluzione di problematiche comuni
+--','18','DOC','CR03.13_DOC_03','Documenti ','Rapporto finale',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('66','01','01','Scambio di esperienze tra portatori di interesse
+--Risoluzione di problematiche comuni
+--','18','POL','CR03.13_POL_04','Piattaforma online','Parte dedicata del portale rete',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('66','01','01','Scambio di esperienze tra portatori di interesse
+--Risoluzione di problematiche comuni
+--','18','BDT','CR03.13_BDT_05','Banca dati','Banca dati distretti del cibo ',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('67','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','18','CSV','CR03.14_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('67','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','18','WFG','CR03.14_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop con attori della filiera',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('67','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','18','DOC','CR03.14_DOC_03','Documenti ','Rapporti di analisi',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('67','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','18','STM','CR03.14_STM_04','Strumenti multimediali','Video',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('67','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','18','SRE','CR03.14_SRE_05','Studi e report','Documenti divulgativi',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('67','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+--Semplificazione amministrativa
+--Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni
+--','18','BDT','CR03.14_BDT_06','Banca dati','Banca dati funzionale al progetto',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('68','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','16','CSV','CR04.01_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno finale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('68','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','16','WFG','CR04.01_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Incontri con organizzazioni dei produttori di filiere specifiche: biologico e produzioni di qualità',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('68','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','16','STV','CR04.01_STV_03','Study visit','Scambio di esperienze per una filiera sostenibile',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('68','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','16','DOC','CR04.01_DOC_04','Documenti ','Rapporto ',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('68','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','16','BDT','CR04.01_BDT_05','Banca dati','Banca dati',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('69','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+
+--','09','DOC','CR04.02_DOC_01','Documenti ','Documenti di ricerca e/o analisi su programmazione e attuazione degli interventi Eco 5, SRA 18, SRA 10, SRA 19',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('69','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+
+--','09','SRE','CR04.02_SRE_02','Studi e report','Report sulla biodiversità delle api e lepidotteri in aziende campione, con valutazione della qualità misurata attraverso l’indicatore BEE',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('69','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+
+--','09','MPP','CR04.02_MPP_03','Materiale promozionale/pubblicazioni','Materiale promozionale (brochure, opuscoli)',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('69','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+
+--','09','LGU','CR04.02_LGU_04','Linea Guida','Linee guida: agricoltore amico degli impollinatori',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('69','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+
+--','09','PHC','CR04.02_PHC_05','Progetto ad hoc','Progetto ad hoc per l’applicazione di un nuovo indicatore di biodiversità delle api selvatiche (indicatore BEE) e il monitoraggio di lepidotteri in un gruppo di aziende campione aderenti agli interventi del PSP (Eco 5, SRA 18, SRA 10, SRA 19)',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('69','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+
+--','09','WFG','CR04.02_WFG_06','Workshop/Focus Group/Tavoli di discussione ','Focus group',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('69','01','03','Aumento della capacità di gestione delle Amministrazioni e degli altri attori coinvolti
+
+--','09','CSV','CR04.02_CSV_07','Convegno/Seminario/Videoconferenza ','Convegno finale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('70','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','09','STV','CR04.03_STV_01','Study visit','Study visit presso aziende agricole per osservare esperienze di campo e favorire il confronto fra agricoltori, istituzioni ed esperti',4,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('70','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','09','DOC','CR04.03_DOC_02','Documenti ','Documento di analisi intervento SRA03 e individuazione di casi-studio regionali',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('70','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','09','MPP','CR04.03_MPP_03','Materiale promozionale/pubblicazioni','Brochure/opuscolo sui benefici dell’agricoltura conservativa da distribuire in occasione delle study visits + altro materiale promozionale (roll-up/bandiere/striscioni)',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('70','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','09','STM','CR04.03_STM_04','Strumenti multimediali','Video Clip con interviste a stakeholders in occasione delle study-visit per favorire la disseminazione di informazioni',10,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('70','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--','09','CSV','CR04.03_CSV_05','Convegno/Seminario/Videoconferenza ','Convegno finale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('71','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','10','DOC','CR04.04_DOC_01','Documenti ','Documenti di analisi',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('71','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','10','STM','CR04.04_STM_02','Strumenti multimediali','Video/podcast',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('71','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','10','POL','CR04.04_POL_03','Piattaforma online','Piattaforma',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('72','02','05','Miglioramento competenze tecnico-professionali
+--','10','DOC','CR04.05_DOC_01','Documenti ','Analisi intervento M 16.5/ SRG07 e individuazione di casi-studio regionali',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('72','02','05','Miglioramento competenze tecnico-professionali
+--','10','WFG','CR04.05_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Living Lab in Parchi/aree protette finalizzati alla diffusione degli accordi collettivi agroambientali già realizzati e in itinere',5,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('72','02','05','Miglioramento competenze tecnico-professionali
+--','10','MPP','CR04.05_MPP_03','Materiale promozionale/pubblicazioni','Materiale promozionale (brochure, opuscoli) da distribuire durante gli incontri',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('72','02','05','Miglioramento competenze tecnico-professionali
+--','10','STV','CR04.05_STV_04','Study visit','Study visit presso aziende agricole per osservare esperienze di campo e favorire il confronto fra agricoltori, istituzioni ed esperti da raccogliere in materiale multimediale da proporre per la disseminazione dei risultati',5,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('72','02','05','Miglioramento competenze tecnico-professionali
+--','10','CSV','CR04.05_CSV_05','Convegno/Seminario/Videoconferenza ','Convegno finale di sintesi delle attività sviluppate',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('72','02','05','Miglioramento competenze tecnico-professionali
+--','10','STM','CR04.05_STM_06','Strumenti multimediali','Clip video di sintesi delle study-visit per favorire la disseminazione di informazioni',5,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('73','02','01','Supporto alle Amministrazioni e gli altri attori coinvolti su 
+--tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarietà fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea','10','DOC','CR04.06_DOC_01','Documenti ','Studio',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('73','02','01','Supporto alle Amministrazioni e gli altri attori coinvolti su 
+--tematiche strategiche
+--Coordinamento e coerenza degli interventi
+--Coerenza e complementarietà fra I e II pilastro
+--Complementarità ed integrazione con i fondi SIE e con altri strumenti finanziari dell’Unione europea','10','CSV','CR04.06_CSV_02','Convegno/Seminario/Videoconferenza ','Giornata di riflessione sul Carbon farming (giugno 2025)',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('74','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','CSV','CR04.07_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno finale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('74','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','WFG','CR04.07_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop/Focus Group/Tavoli di discussione (ottobre 2025, ottobre 2026)',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('74','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','DOC','CR04.07_DOC_03','Documenti ','Documenti di analisi',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('74','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','MPP','CR04.07_MPP_04','Materiale promozionale/pubblicazioni','Materiale promozionale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('74','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','POL','CR04.07_POL_05','Piattaforma online','Area dedicata portale rete',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('74','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','15','BDT','CR04.07_BDT_06','Banca dati','Banca dati funzionale al progetto',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('75','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','WFG','CR04.08_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Workshop sui CFF',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('75','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','LGU','CR04.08_LGU_02','Linea Guida','Linee guida per il ripristino degli ecosistemi forestali degradati con il fine di migliorare l’erogazione dei servizi ecosistemici',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('75','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','DOC','CR04.08_DOC_03','Documenti ','1. Pubblicazione scientifica sull’analisi degli impatti biofisici ed economici delle azioni di ripristino sui flussi di servizi ecosistemici forestali 
+
+--2.Lista di Criteri & Indicatori per il monitoraggio degli impatti delle pratiche selvicolturali sugli ecosistemi forestali degradati',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('75','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','STM','CR04.08_STM_04','Strumenti multimediali','Video divulgativo',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('75','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','MPP','CR04.08_MPP_05','Materiale promozionale/pubblicazioni','Brochure sugli strumenti di valutazione biofisica ed economica degli impatti delle azioni di ripristino delle foreste degradate sui servizi ecosistemici 
+
+--Pubblicazione tecnico-divulgativa sulle best practices di ripristino delle foreste degradate in Italia',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('75','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','BDT','CR04.08_BDT_06','Banca dati','Banca dati dei progetti di ripristino degli ecosistemi forestali degradati con relativi impatti sui principali servizi ecosistemici',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('75','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','TFG','CR04.08_TFG_07','Task force on Demand/Gruppo di lavoro','Gruppo di lavoro con expertise sulle pratiche gestionali delle foreste degradate e servizi ecosistemici che possa fungere da supporto ai gestori e pianificatori locali',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('76','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','LGU','CR04.09_LGU_01','Linea Guida','Documento di trasferimento tecnologico aggiornato sulle tecniche di coltivazione tra cui irrigazione e potatura finalizzate alla produzione di legno di qualità in pioppicoltura e impianti policiclici con pioppo',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('76','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','WFG','CR04.09_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop dedicato alla pioppicoltura (comprendente aspetti relativi ai cloni, alla coltivazione e al mercato dei prodotti) e agli impianti policiclici con pioppo',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('76','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','STV','CR04.09_STV_03','Study visit','Visita studio presso aziende situate nel Centro-Sud che già praticano la coltivazione del pioppo, con l’obiettivo di stimolare lo sviluppo di filiere locali',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('76','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','ASC','CR04.09_ASC_04','Attività di supporto e consulenza','Attività di supporto tecnico in ambito implementativo del PSP per le aziende che coltivano i nuovi cloni MSA di pioppo ibrido e che impiantano soprassuoli di tipo policiclico e/o utilizzano i cloni di pioppo in ambienti colturali alternativi, come quelli del Centro-Sud',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('77','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','10','WFG','CR04.10_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Tavoli di approfondimento tecnico con i partecipanti alla Rete e workshop di formazione sul rilievo fenologico',9,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('77','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','10','DOC','CR04.10_DOC_02','Documenti ','Documenti ricerca/analisi su elaborazioni dati e informazioni',9,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('77','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','10','LGU','CR04.10_LGU_03','Linea Guida','Linee guida specie-specifiche per il monitoraggio fenologico',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('77','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','10','BDT','CR04.10_BDT_04','Banca dati','Banca dati fenologici raccolti dalla Rete',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('78','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','WFG','CR04.11_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Workshop sulla progettazione di una piattaforma informativa per favorire incontro tra domanda e offerta dei Materiali di Moltiplicazione Forestale per il supporto e lo sviluppo della filiera vivaistica forestale',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('78','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','DOC','CR04.11_DOC_02','Documenti ','Documento di analisi del sistema vivaistico forestale pubblico e privato e della qualità del materiale prodotto (certificazione) attraverso un’indagine di settore realizzata con questionari e interviste dirette agli operatori',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('78','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+--Risoluzione di problematiche comuni','15','MPP','CR04.11_MPP_03','Materiale promozionale/pubblicazioni','Pubblicazione divulgativa sull’impiego dei Materiali di Base (provenienze forestali) disponibili nei registri regionali e nazionale, in relazione all’utilizzo sul territorio per finalità forestali nel contesto del cambiamento climatico',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('79','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','10','STV','CR04.12_STV_01','Study visit','Study visit in campo: missioni sul territorio con il coinvolgimento diretto dei destinatari per facilitare lo scambio di esperienze. 2 al nord, 2 al centro, 2 al sud Italia, in aree agricole e forestali',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('79','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','10','DOC','CR04.12_DOC_02','Documenti ','Documento divulgativo con le tecniche agroecologiche che sono risultate avere un maggiore impatto positivo
+
+--Documento finale',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('79','01','06','Implementazione di un sistema di monitoraggio permanente e definizione di azioni e orientamenti comuni','10','BDT','CR04.12_BDT_03','Banca dati','Banca dati delle tecniche agroecologiche. Archiviazione dei dati analitici raccolti nella banca dati dei suoli nazionale e continuazione delle attività di armonizzazione nazionale della banca dati dei suoli',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('80','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','16','CSV','CR04.13_CSV_01','Convegno/Seminario/Videoconferenza ','Incontri di carattere divulgativo ed informativo destinati ad un ampio pubblico da tenersi tra il secondo e terzo anno',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('80','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','16','WFG','CR04.13_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Momenti interattivi di approfondimento tecnico dedicati ad un gruppo ristretto di destinatari per lo scambio e la messa in comune di esperienze',5,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('80','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','16','LGU','CR04.13_LGU_03','Linea Guida','Linee guida sul miglioramento della sostenibilità ambientale degli allevamenti, (alimentazione, anche sottoprodotti, risorse idriche) previsti nel secondo e terzo anno',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('80','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','16','DOC','CR04.13_DOC_04','Documenti ','Documenti di ricerca su certificazioni per il comparto zootecnico e utilizzo di strumenti di valutazione ambientale',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('80','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','16','STM','CR04.13_STM_05','Strumenti multimediali','Video',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('80','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','16','MPP','CR04.13_MPP_06','Materiale promozionale/pubblicazioni','Quaderno sulle attività svolte dai beneficiari delle sottomisure 10.2 e 16.2 finanziate nell''ambito del PSRN',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('80','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','16','ASC','CR04.13_ASC_07','Attività di supporto e consulenza','Supporto e consulenza all’ADG e alle Regioni',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('81','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','10','DOC','CR04.14_DOC_01','Documenti ','Redazione di un documento di policy propedeutico al redigendo Piano Nazionale di Ripristino
+
+--Redazione di un quadro di sintesi degli interventi sulla risorsa idrica nelle aree soggette a vincolo naturale, inseriti nel PSP',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('81','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','10','WFG','CR04.14_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Realizzazione di laboratori “Be-pArts” che uniscono arte, musica e sostenibilità per sensibilizzare il pubblico sui temi cruciali legati all’ambiente e all’acqua',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('82','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','10','DOC','CR04.15_DOC_01','Documenti ','Report sugli impatti ottenuti dall’applicazione della misura del biologico a diverse scale (nazionale, regionale, provinciale, distretti biologici) sul SOC 
+
+--Pubblicazione divulgativa per gli agricoltori e le associazioni di categoria',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('82','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','10','WFG','CR04.15_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Seminario',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('82','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--','10','MPP','CR04.15_MPP_03','Materiale promozionale/pubblicazioni','Video/Podcast',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('83','02','07','Co-creazione e scambio di conoscenze, esperienze e buone pratiche
+--','09','DOC','CR04.16_DOC_01','Documenti ','Documenti di ricerca',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('83','02','07','Co-creazione e scambio di conoscenze, esperienze e buone pratiche
+--','09','WFG','CR04.16_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('83','02','07','Co-creazione e scambio di conoscenze, esperienze e buone pratiche
+--','09','SRE','CR04.16_SRE_03','Studi e report','Report di analisi',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('84','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','09','SRE','CR04.17_SRE_01','Studi e report','Report di analisi',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('84','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','09','ASC','CR04.17_ASC_02','Attività di supporto e consulenza','Attività di supporto tecnico in ambito implementativo del PSP per le aziende che coltivano i nuovi cloni MSA di pioppo ibrido e che impiantano soprassuoli di tipo policiclico e/o utilizzano i cloni di pioppo in ambienti colturali alternativi, come quelli del Centro-Sud',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','WFG','CR05.01_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Conferenze annuale partecipativa e Laboratori formativi',6,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','DOC','CR05.01_DOC_02','Documenti ','Rapporti su risultati di LEADER',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','MPP','CR05.01_MPP_03','Materiale promozionale/pubblicazioni','Repertori LEADER',6,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','POL','CR05.01_POL_04','Piattaforma online','Area web LEADER',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','BPC','CR05.01_BPC_05','Bando/premio/concorso','Premio annuale “Spark Leader”',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','BDT','CR05.01_BDT_06','Banca dati','Piattaforme digitalizzate e visive con Open Data e GIS avanzati su LEADER in Italia',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','PHC','CR05.01_PHC_07','Progetto ad hoc','Living Lab',9,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('85','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','ASC','CR05.01_ASC_08','Attività di supporto e consulenza','Attività di supporto e consulenza',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('86','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','ASC','CR05.02_ASC_01','Attività di supporto e consulenza','Attività di supporto e consulenza',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('86','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','WFG','CR05.02_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Focus group di confronto su meta-analisi e meta-valutazione',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('86','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','SRE','CR05.02_SRE_03','Studi e report','Rapporti su meta-analisi e meta-valutazione',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('86','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','LGU','CR05.02_LGU_04','Linea Guida','Linee guida per GAL',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('86','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','11','BDT','CR05.02_BDT_05','Banca dati','Repository rapporti autovalutazione',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','ASC','CR05.03_ASC_01','Attività di supporto e consulenza','Attività di supporto e consulenza',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.03_CSV_02','Convegno/Seminario/Videoconferenza ','Convegno su Smart Village',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','WFG','CR05.03_WFG_03','Workshop/Focus Group/Tavoli di discussione ','workshop sull’implementazione degli Smart Village in Italia ed Europa',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','LGU','CR05.03_LGU_04','Linea Guida','Linee guida su Smart Village',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','SRE','CR05.03_SRE_05','Studi e report','Rapporti guida su Smart Village e sul ruolo dei progetti integrati complessi nello sviluppo delle aree rurali',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','MPP','CR05.03_MPP_06','Materiale promozionale/pubblicazioni','Materiale informativo su Smart Village',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','BDT','CR05.03_BDT_07','Banca dati','Banca dati su Smart Village',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('87','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','POL','CR05.03_POL_08','Piattaforma online','Area web su Smart Village',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('88','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.04_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno su ASFO',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('88','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','WFG','CR05.04_WFG_02','Workshop/Focus Group/Tavoli di discussione ','2 Workshop  
+
+--2 Focus group',4,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('88','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','SRE','CR05.04_SRE_03','Studi e report','3 Rapporti informativi
+
+--2 Rapporti Tematici',5,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('88','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','BDT','CR05.04_BDT_04','Banca dati','Archivio delle ASFO italiane',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('88','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','POL','CR05.04_POL_05','Piattaforma online','Forum on-line e FAQ su aspetti formali e piani di gestione per la costituzione delle ASFO',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('89','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','ASC','CR05.05_ASC_01','Attività di supporto e consulenza','Attività di supporto e consulenza',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('89','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.05_CSV_02','Convegno/Seminario/Videoconferenza ','Incontro di carattere divulgativo ed informativo destinato ad un ampio pubblico finalizzato a condividere i risultati delle analisi svolte',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('89','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','WFG','CR05.05_WFG_03','Workshop/Focus Group/Tavoli di discussione ','Focus Group con i soggetti istituzionali e non rappresentativi del settore e portatori di interessi delle comunità locali',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('89','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','SRE','CR05.05_SRE_04','Studi e report','Report di ricerca/analisi sul turismo rurale e le sue declinazioni nelle politiche',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('89','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','MPP','CR05.05_MPP_05','Materiale promozionale/pubblicazioni','Repertorio su esperienze Turismo rurale sostenibile',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('90','02','04','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.06_CSV_01','Convegno/Seminario/Videoconferenza ','Seminari su Politiche del cibo',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('90','02','04','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','LGU','CR05.06_LGU_02','Linea Guida','Toolkit Policibo',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('90','02','04','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','DOC','CR05.06_DOC_03','Documenti ','Analisi delle PLC in Italia',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('90','02','04','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','MPP','CR05.06_MPP_04','Materiale promozionale/pubblicazioni','Comunicati stampa in occasione della pubblicazione del Toolkit Policibo',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','ASC','CR05.07_ASC_01','Attività di supporto e consulenza','Attività di supporto e consulenza',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','LGU','CR05.07_LGU_02','Linea Guida','Linee guida per la messa a punto di una definizione di area rurale funzionale che sia applicabile a livello internazionale; Linee guida per la co-progettazione degli interventi a livello locale',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','WFG','CR05.07_WFG_03','Workshop/Focus Group/Tavoli di discussione ','Focus group territoriali',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','SRE','CR05.07_SRE_04','Studi e report','Studio sulla rigenerazione territoriale Valutazione basata su outcome mapping
+
+--Metodologia per l’identificazione di aree rurali funzionali',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.07_CSV_05','Convegno/Seminario/Videoconferenza ','Convegno conclusivo per la condivisione dei risultati del progetto',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','BDT','CR05.07_BDT_06','Banca dati','Banca dati Open kit agricoltura',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','STM','CR05.07_STM_07','Strumenti multimediali','E-book – sfide demografiche',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('91','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','POL','CR05.07_POL_08','Piattaforma online','Pagina web tematica',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('92','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.08_CSV_01','Convegno/Seminario/Videoconferenza ','3 Webtalk
+
+--1 Seminario',4,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('92','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','WFG','CR05.08_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Focus group',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('92','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','DOC','CR05.08_DOC_03','Documenti ','Documento di policy sugli interventi PAC (agricoltura sociale) e delle altre politiche intervento
+
+--Rapporto a stampa sulla qualità della vita e sul benessere nelle aree rurali',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('92','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','MPP','CR05.08_MPP_04','Materiale promozionale/pubblicazioni','Opuscolo',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('93','02','05','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.09_CSV_01','Convegno/Seminario/Videoconferenza ','2 Seminari
+
+--1 Webinar',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('93','02','05','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','WFG','CR05.09_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Focus group e tavoli di lavoro',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('93','02','05','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','STV','CR05.09_STV_03','Study visit','Study visit',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('93','02','05','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','LGU','CR05.09_LGU_04','Linea Guida','Linea guida',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('93','02','05','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','DOC','CR05.09_DOC_05','Documenti ','Documento di analisi',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('93','02','05','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','MPP','CR05.09_MPP_06','Materiale promozionale/pubblicazioni','Materiali divulgativi',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('94','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','15','CSV','CR05.10_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('94','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','15','WFG','CR05.10_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('94','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','15','LGU','CR05.10_LGU_03','Linea Guida','Linea guida di indirizzo e gestione delle attività di TF',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('94','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','15','DOC','CR05.10_DOC_04','Documenti ','Indagine sullo stato delle attività di terapia forestale in Italia',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('94','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','15','BDT','CR05.10_BDT_05','Banca dati','Banca dati distretti biologici',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('94','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','15','MPP','CR05.10_MPP_06','Materiale promozionale/pubblicazioni','Materiali divulgativi',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('95','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','WFG','CR05.11_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Workshop',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('95','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','CSV','CR05.11_CSV_02','Convegno/Seminario/Videoconferenza ','Convegno',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('95','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','DOC','CR05.11_DOC_03','Documenti ','Documenti di analisi e ricerca',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('95','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','MPP','CR05.11_MPP_04','Materiale promozionale/pubblicazioni','Materiali divulgativi',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('95','02','01','Scambio di esperienze tra portatori di interesse
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Scambio con reti in paesi terzi
+--Risoluzione di problematiche comuni
+--Scambio di esperienze tra portatori d’interesse 
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Miglioramento competenze tecnico-professionali
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','17','SRE','CR05.11_SRE_05','Studi e report','Report',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','CSV','CR06.01_CSV_01','Convegno/Seminario/Videoconferenza ','1 Convegno 
+
+--2 Seminari',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','WFG','CR06.01_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop/Focus Group/ Tavoli di discussione',4,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','STV','CR06.01_STV_03','Study visit','Ciclo Study visit',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','LGU','CR06.01_LGU_04','Linea Guida','Linea guida',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','DOC','CR06.01_DOC_05','Documenti ','Documento di ricerca o analisi',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','STM','CR06.01_STM_06','Strumenti multimediali','Strumenti multimediali (es. clip audio, video, docufilm, e-book)',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','POL','CR06.01_POL_07','Piattaforma online','Sezioni dedicate di Innovarurale',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','BDT','CR06.01_BDT_08','Banca dati','Implementazione Banca dati PEI-AGRI',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('96','02','01','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi 
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la 
+--crescita
+
+--','23','PHC','CR06.01_PHC_09','Progetto ad hoc','Valorizzazione risultati PEI-Agri del precedente periodo di programmazione',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('97','02','07','Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','WFG','CR06.02_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Workshop con stakeholders',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('97','02','07','Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','DOC','CR06.02_DOC_02','Documenti ','Documenti di progettazione del percorso di formazione',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','CSV','CR06.03_CSV_01','Convegno/Seminario/Videoconferenza ','Eventi di lancio e presentazione del progetto destinati ai partner e ai beneficiari. Evento divulgativo a conclusione del percorso sperimentale',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','CSV','CR06.03_CSV_02','Convegno/Seminario/Videoconferenza ','Dinamiche di confronto tra “senior mentor” di realtà aziendali affermate, giovani agricoltori e studenti',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','WFG','CR06.03_WFG_03','Workshop/Focus Group/Tavoli di discussione ','Dinamiche di confronto online tra “senjor mentor” (leader ispirazionali) di realtà aziendali affermate, giovani agricoltori e studenti',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','STV','CR06.03_STV_04','Study visit','Mini camp organizzati in collaborazione con altri Centri Crea (es. Crea AA, Crea ZA, Crea IT), incentrati su visite aziendali ed esperienze pratiche',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','LGU','CR06.03_LGU_05','Linea Guida','Disciplinare della manifestazione d’interesse e dei protocolli di intesa con le Regioni e degli accordi di partnership con le Università
+
+--',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','STM','CR06.03_STM_06','Strumenti multimediali','Progettazione, sviluppo e fruizione del nuovo percorso formativo, finalizzato alla conoscenza delle opportunità della PAC e all’acquisizione di competenze trasversali e metodologiche',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','MPP','CR06.03_MPP_07','Materiale promozionale/pubblicazioni',' - kit informativo sul progetto - video divulgativi a titolo dimostrativo-informativo - Manuale a compendio del corso e-learning - pubblicazione sui risultati e l’impatto del progetto',4,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','POL','CR06.03_POL_08','Piattaforma online','Restyling grafico, sviluppo, gestione e implementazione piattaforma e-learning www.rural4learning.eu , inclusi atti propedeutici all’affidamento del servizio di supporto tecnico',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','BDT','CR06.03_BDT_09','Banca dati','Implementazione e gestione database per l’organizzazione delle informazioni in maniera strutturata (es. banca dati aziende, archivio casi studio, archivio partecipanti ai corsi, ecc.).',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','PHC','CR06.03_PHC_10','Progetto ad hoc','iniziativa pilota per la creazione, attraverso protocolli di intesa con le Regioni e accordi con le università, di un ecosistema di formazione, ricerca e innovazione (“living lab”), che coinvolge istituzioni, università, imprese, stakeholders territoriali e società civile nel processo di co-progettazione, sperimentazione e monitoraggio/valutazione dei risultati.',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('98','02','04','Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC','23','WFG','CR06.03_WFG_11','Workshop/Focus Group/Tavoli di discussione ','Supporto e consulenza ai partner e ai beneficiari per tutta la durata del progetto',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('99','02','05','Miglioramento competenze tecnico-professionali','23','CSV','CR06.04_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno conclusivo',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('99','02','05','Miglioramento competenze tecnico-professionali','23','WFG','CR06.04_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop
+--- Madonie (maggio 2025)',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('99','02','05','Miglioramento competenze tecnico-professionali','23','DOC','CR06.04_DOC_03','Documenti ','Pubblicazione contenente i risultati del percorso di ricerca sviluppato negli ultimi anni',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('99','02','05','Miglioramento competenze tecnico-professionali','23','MPP','CR06.04_MPP_04','Materiale promozionale/pubblicazioni','Materiale promozionale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('99','02','05','Miglioramento competenze tecnico-professionali','23','POL','CR06.04_POL_05','Piattaforma online','Pagina web e relativo canale social',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('99','02','05','Miglioramento competenze tecnico-professionali','23','PHC','CR06.04_PHC_06','Progetto ad hoc','Progetto ad hoc su “agricoltura rigenerativa e health equity” con particolare attenzione a come la Scuola può supportare processi innovativi in questa direzione;  
+
+--Progetto ad hoc per la sperimentazione del modello messo a punto con la Scuola Giovani Pastori a livello europeo (Erasmus Plus)',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('99','02','05','Miglioramento competenze tecnico-professionali','23','BPC','CR06.04_BPC_07','Bando/premio/concorso','Bando per la raccolta delle candidature della terza edizione',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('100','02','05','Miglioramento competenze tecnico-professionali','15','WFG','CR06.05_WFG_01','Workshop/Focus Group/Tavoli di discussione ','Workshop con esempi di tecniche geomatiche, ICT e AI a supporto della gestione di rimboschimenti e piantagioni da legno; produzione di materiale informativo/promozionale sul tema 
+
+--Focus group funzionale al documento di analisi',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('100','02','05','Miglioramento competenze tecnico-professionali','15','DOC','CR06.05_DOC_02','Documenti ','Documento di analisi delle tecniche geomatiche, ICT e AI a supporto della pianificazione, della certificazione e della tracciabilità forestale per predisporre le basi di un knowledge hub',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('101','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--Semplificazione amministrativa','12','CSV','CR06.06_CSV_01','Convegno/Seminario/Videoconferenza ','4 webinar  
+
+--2 convegni di cui uno internazionale',6,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('101','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--Semplificazione amministrativa','12','WFG','CR06.06_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Incontri di confronto con tipologie diverse di stakeholder dell’AKIS',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('101','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--Semplificazione amministrativa','12','LGU','CR06.06_LGU_03','Linea Guida','Documenti per il Coordinamento AKIS',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('101','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--Semplificazione amministrativa','12','DOC','CR06.06_DOC_04','Documenti ','Documenti sullo stato di attuazione e analisi degli AKIS',4,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('101','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--Semplificazione amministrativa','12','POL','CR06.06_POL_05','Piattaforma online','Portale Innovarurale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('101','01','03','Aumento della capacità di gestione delle Amministrazioni e degli 
+--altri attori coinvolti
+--Semplificazione amministrativa','12','ASC','CR06.06_ASC_06','Attività di supporto e consulenza','Supporto e consulenza al Masaf',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('102','02','05','Miglioramento competenze tecnico-professionali','23','CSV','CR06.07_CSV_01','Convegno/Seminario/Videoconferenza ','Seminari',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('102','02','05','Miglioramento competenze tecnico-professionali','23','WFG','CR06.07_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Tavoli di discussione',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('102','02','05','Miglioramento competenze tecnico-professionali','23','DOC','CR06.07_DOC_03','Documenti ','Working paper ',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('102','02','05','Miglioramento competenze tecnico-professionali','23','MPP','CR06.07_MPP_04','Materiale promozionale/pubblicazioni','Materiale promozionale',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('102','02','05','Miglioramento competenze tecnico-professionali','23','BDT','CR06.07_BDT_05','Banca dati','Banca dati',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','CSV','CR06.08_CSV_01','Convegno/Seminario/Videoconferenza ','Convegni/Seminari ',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','WFG','CR06.08_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Workshop sui vari temi della digitalizzazione',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','STV','CR06.08_STV_03','Study visit','Study visit aziendali',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','LGU','CR06.08_LGU_04','Linea Guida','Linea guida',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','DOC','CR06.08_DOC_05','Documenti ','Documenti di analisi',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','STM','CR06.08_STM_06','Strumenti multimediali','Video/podcast',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','MPP','CR06.08_MPP_07','Materiale promozionale/pubblicazioni','Materiali divulgativi',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','POL','CR06.08_POL_08','Piattaforma online','Area portale rete',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('103','02','05','Miglioramento competenze tecnico-professionali','12','BDT','CR06.08_BDT_09','Banca dati','Banca dati funzionale al progetto',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('104','02','05','Miglioramento competenze tecnico-professionali','23','WFG','CR06.09_WFG_01','Workshop/Focus Group/Tavoli di discussione ','9 Formazione A 
+
+--3 Formazione B 
+
+--4 Formazione C',16,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('104','02','05','Miglioramento competenze tecnico-professionali','23','STV','CR06.09_STV_02','Study visit','3 Cross visit per modulo A
+
+--3 Cross visit per modulo B',6,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('104','02','05','Miglioramento competenze tecnico-professionali','23','LGU','CR06.09_LGU_03','Linea Guida','Materiali didattici Connessi alla Formazione',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('105','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','POL','CR07.01_POL_01','Piattaforma online','Sito web RetePAC  
+
+--Sito web PSP',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('105','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','STM','CR07.01_STM_02','Strumenti multimediali','10 Video
+
+--10 Podcast
+
+--6 PSPHub',26,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('105','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','MPP','CR07.01_MPP_03','Materiale promozionale/pubblicazioni','Template documentali',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('105','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','ASC','CR07.01_ASC_04','Attività di supporto e consulenza','Attività di support e consulenza all’AdG del PSP e della RetePAC',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('105','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','BDT','CR07.01_BDT_05','Banca dati','Banche dati funzionali al sito Rete',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('106','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','ASC','CR07.02_ASC_01','Attività di supporto e consulenza','Supporto',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('106','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','CSV','CR07.02_CSV_02','Convegno/Seminario/Videoconferenza ','Convegni e altri eventi',4,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','STM','CR07.03_STM_01','Strumenti multimediali','Video',20,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','WFG','CR07.03_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Tavoli di lavoro',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','LGU','CR07.03_LGU_03','Linea Guida','Linee guida',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','DOC','CR07.03_DOC_04','Documenti ','Studi',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','MPP','CR07.03_MPP_05','Materiale promozionale/pubblicazioni','Materiale divulgativo',4,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','POL','CR07.03_POL_06','Piattaforma online','Sito web eccellenze',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','CSV','CR07.03_CSV_08','Convegno/Seminario/Videoconferenza ','Convegno di presentazione dei risultati del progetto “Majella”',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('107','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','PHC','CR07.03_PHC_09','Progetto ad hoc','Progetto Majella',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('108','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','CSV','CR07.04_CSV_01','Convegno/Seminario/Videoconferenza ','Eventi',3,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('108','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','LGU','CR07.04_LGU_02','Linea Guida','Linee guida legate ai giochi sviluppati',3,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('108','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','MPP','CR07.04_MPP_03','Materiale promozionale/pubblicazioni','Giochi didattici',2,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('108','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','POL','CR07.04_POL_04','Piattaforma online','Sezione Web dedicata portale Rete',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('108','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','TFG','CR07.04_TFG_05','Task force on Demand/Gruppo di lavoro','Team di esperti per la risoluzione di problematiche specifiche a beneficio dei gruppi target della Rete Rurale',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('108','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','STM','CR07.04_STM_06','Strumenti multimediali','2 Pod cast  
+
+--2 Video tutorial',4,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('109','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','MPP','CR07.05_MPP_01','Materiale promozionale/pubblicazioni','RRN Magazine',9,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('110','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','CSV','CR07.06_CSV_01','Convegno/Seminario/Videoconferenza ','Convegno a SOL (Verona, Marzo 2025)  
+
+--Convegno a OlioCapitale (Trieste)',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('110','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','WFG','CR07.06_WFG_02','Workshop/Focus Group/Tavoli di discussione ','Presentazione di Geoleario Presentazione di TriviaGame',2,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('110','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','DOC','CR07.06_DOC_03','Documenti ','Ricerca su Oleoturismo',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('110','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','POL','CR07.06_POL_04','Piattaforma online','Portale Oleario',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('110','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','BPC','CR07.06_BPC_05','Bando/premio/concorso','Informatizzazione/digitalizzazione del gioco Trivia Game + Concorso Nazionale',1,1,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('110','02','04','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','BDT','CR07.06_BDT_06','Banca dati','Geooleario',1,0,'','',0,null,'','','',0,null,'',null)
+--INSERT INTO [Output](IdProgetto,CodPriorita,ObiettivoRete,RisultatiAttesi,CodTema,CodTipoOutput,CodOutputCompleto,OutputDescrizione,OutputProgrammato,NumOutputProgrammato,Comunicazione,OutputRealizzato,OutputNonProgrammato,NumOutputRealizzato,NumOutputNonProgrammato,OutputAllegato,OutputLink,NoteOutputResponsabileEnte,ParereResponsabileMinistero,ParereResponsabileMinisteroData,MotivazioneResponsabileMinistero,ComunicazioneData) 
+--VALUES('111','02','07','Scambio di esperienze tra portatori di interesse
+--Scambio con reti in paesi terzi
+--Implementazione di strategie e approcci adattati alle specifiche necessità, funzionali a restituire ai beneficiari strumenti per la crescita
+--Risoluzione di problematiche comuni
+--Miglioramento competenze tecnico-professionali
+--Scambio di esperienze tra portatori d’interesse
+--Diffusione conoscenze su opportunità e benefici nuova PAC
+--Co-creazione e scambio di conoscenze, esperienze e buone pratiche','24','DOC','CR07.07_DOC_01','Documenti ','Bioreport 2024-2025 Bioreport 2026 ',2,1,'','',0,null,'','','',0,null,'',null)

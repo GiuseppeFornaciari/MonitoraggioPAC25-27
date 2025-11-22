@@ -1,0 +1,45 @@
+﻿@model MonitoraggioPAC25_27.Models.Schede
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>CANCELLAZIONE SCHEDA</h1>
+
+<h3>Sei sicuro di cancellare la scheda?</h3>
+<div>
+    <h4>Scheda</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodScheda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodScheda)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Scheda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Scheda)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataMonitoraggio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataMonitoraggio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodEnte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodEnteNavigation.DescrizioneEnte)
+        </dd>
+    </dl>
+    
+    <form asp-action="EliminaScheda">
+        <input type="hidden" asp-for="IdScheda" />
+        <input type="submit" value="Elimina" class="btn btn-danger" /> |
+        <a asp-action="ElencoSchede">Torna a elenco schede</a>
+    </form>
+</div>

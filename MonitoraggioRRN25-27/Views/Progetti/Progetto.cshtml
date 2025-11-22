@@ -1,0 +1,365 @@
+﻿@model MonitoraggioPAC25_27.Models.Progetti
+@using MonitoraggioPAC25_27.Extensions
+@{
+    ViewData["Title"] = "PROGETTO";
+    bool isResponsabileMinistero = ViewData["isResponsabileMinistero"] is true;
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-12 col-lg-10">
+        <div class="card mb-4 shadow-sm border-0">
+            <div class="card-header text-white fw-semibold" style="background-color: #2c3e50;">
+                PROGETTO
+            </div>
+            <div class="card-body">
+                <div class="info-block">
+                    <div class="info-label">Monitoraggio al</div>
+                    <div class="info-value">@($"{Model.IdSchedaNavigation?.DataMonitoraggio}")</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Progetto</div>
+                    <div class="info-value">@($"{Model.CodProgetto} - {Model.Progetto}")</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Scheda</div>
+                    <div class="info-value">@($"{Model.IdSchedaNavigation?.CodScheda} - {Model.IdSchedaNavigation?.Scheda}")</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Temi</div>
+                    <div class="info-value">
+                        @if (ViewData["Temi"] is IEnumerable<dynamic> temi)
+                        {
+                            foreach (var t in temi)
+                            {
+                                <span class="temi-tooltip me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="@t.Descrizione">
+                                    @t.Codice
+                                </span>
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Responsabile Progetto Ente</div>
+                    <div class="info-value">@ViewBag.ResonsabiliProgettoEnte</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Responsabile Scheda Ente</div>
+                    <div class="info-value">@ViewBag.ResonsabileSchedaEnte</div>
+                </div>
+                <div class="info-block">
+                    <div class="info-label">Responsabile Progetto Ministero</div>
+                    <div class="info-value">@ViewBag.ResponsabiliProgettoMinistero</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-12">
+                <h4>Riepilogo Output</h4>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        @*                         <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="IdScheda" />
+                        </form> *@
+                        <div class="accordion" id="accordionOutputs">
+                            @if (Model.Outputs != null && Model.Outputs.Any())
+                            {
+                                @foreach (var output in Model.Outputs.Select((item, index) => new { item, index }))
+                                {
+                                    var isExpanded = (ViewBag.idOutputDaEspandere != null && (int)ViewBag.idOutputDaEspandere == output.item.IdOutput);
+                                    var collapseId = $"collapseOutput{output.index}";
+                                    var headingId = $"headingOutput{output.index}";
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="@headingId">
+                                            <button class="accordion-button @(isExpanded ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#@collapseId" aria-expanded="@(isExpanded.ToString().ToLower())" aria-controls="@collapseId">
+                                                <strong>@output.item.CodOutputCompleto</strong>&nbsp;@output.item.CodTipoOutputNavigation?.TipoOutput
+                                            </button>
+                                        </h2>
+                                        <div id="@collapseId" class="accordion-collapse collapse @(isExpanded ? "show" : "")" aria-labelledby="@headingId" data-bs-parent="#accordionOutputs">
+                                            <div class="accordion-body">
+                                                <div class="container-fluid">
+                                                    <!-- Intestazione -->
+                                                    <div class="row fw-bold pb-2 mb-2">
+                                                        <div class="col-2">Tipo</div>
+                                                        <div class="col-4">Programmato</div>
+                                                        <div class="col-4">Realizzato</div>
+                                                        <div class="col-2">Parere</div>
+                                                    </div>
+
+                                                    <!-- Riga con i valori -->
+                                                    <div class="row mb-2">
+                                                        <div class="col-2">@output.item.CodTipoOutputNavigation?.TipoOutput</div>
+                                                        <div class="col-4">@output.item.OutputProgrammato</div>
+                                                        <div class="col-4">@output.item.OutputRealizzato</div>
+                                                        <div class="col-2">@output.item.ParereResponsabileMinistero.ToLabel()</div>
+                                                    </div>
+
+                                                    <!-- Riga LINK -->
+                                                    @if (output.item?.OutputLink?.Length > 0)
+                                                    {
+                                                        <div class="row mb-2 align-items-start">
+                                                            <div class="col-sm-2">
+                                                                <label asp-for="@output.item.OutputLink" class="col-form-label fw-bold mb-0"></label>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                @{
+                                                                    var links = output.item.OutputLink?.Trim().Split('\n', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                                                                }
+                                                                <div class="d-flex flex-column gap-1" style="font-weight: normal;">
+                                                                    @if (links != null)
+                                                                    {
+                                                                        foreach (var link in links)
+                                                                        {
+                                                                            <a href="@link" target="_blank" style="text-decoration: underline; word-break: break-word;">@link</a>
+                                                                        }
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                    <!-- Riga ALLEGATI -->
+                                                    @{
+                                                        var allegati = ViewData["AllegatiPerOutput"] as Dictionary<int, List<string>>;
+                                                        List<string> files = null;
+                                                        bool ciSonoAllegati = allegati != null
+                                                        && allegati.TryGetValue(output.item.IdOutput, out files)
+                                                        && files != null
+                                                        && files.Any();
+                                                    }
+
+                                                    @if (ciSonoAllegati)
+                                                    {
+                                                        <div class="row mb-2 align-items-start">
+                                                            <div class="col-sm-2">
+                                                                <label class="col-form-label fw-bold mb-0">Output allegati</label>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <ul class="list-unstyled">
+                                                                    @foreach (var file in files)
+                                                                    {
+                                                                        <li>
+                                                                            <a asp-controller="Output"
+                                                                               asp-action="DownloadAllegato"
+                                                                               asp-route-idOutput="@output.item.IdOutput"
+                                                                               asp-route-fileName="@file"
+                                                                               target="_blank">@file</a>
+                                                                        </li>
+                                                                    }
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+
+                                                    <!-- Pulsante -->
+                                                    <div class="row mt-3">
+                                                        <div class="col">
+                                                            <a class="btn btn-sm btn-primary"
+                                                               asp-controller="Output"
+                                                               asp-action="Output"
+                                                               asp-route-id="@output.item.IdOutput">
+                                                                @(isResponsabileMinistero ? "Aggiorna dettagli parere" : "Aggiorna dettagli output")
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="alert alert-warning" role="alert">
+                                    Nessun output collegato al progetto.
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <!--SEZIONE INSERIMENTI REFERENTI PROGETTO E MINISTERO-->
+                @if ((bool)(ViewBag.ResponsabileProgetto ?? false) || (bool)(ViewBag.ResponsabileMinistero ?? false))
+                {
+                    <form asp-action="Progetto" asp-controller="Progetti">
+
+                        <input type="hidden" asp-for="idProgetto" />
+                        <input type="hidden" asp-for="CodProgetto" />
+                        <input type="hidden" asp-for="IdScheda" />
+                        <input type="hidden" asp-for="Progetto" />
+
+                        <div class="row">
+                            <div class="container-fluid">
+                                <!-- Intestazione -->
+                                <div class="row fw-bold pb-2 mb-2">
+                                    <div class="col-6" style="text-align:center;background-color:rgb(255, 229, 153);padding:15px">Note di progetto a cura del Responsabile Progetto Ente</div>
+                                    <div class="col-6" style="text-align:center;background-color:rgb(180, 219, 142);padding:15px">Note di progetto a cura del Responsabile Progetto Ministero</div>
+                                </div>
+                                <div class="row mb-2">
+
+                                    <!-- Responsabile Progetto Ente -->
+                                    @if ((bool)(ViewBag.ResponsabileProgetto ?? false))
+                                    {
+                                        <input type="hidden" name="TipoResponsabile" value="PROGETTO" />
+                                        //Non modifico il parere del responsabile Ministero
+                                        <input type="hidden" asp-for="NoteProgettoResponsabileProgettoMinistero" />
+                                        <input type="hidden" asp-for="CheckInserimentoResponsabileProgettoMinistero" />
+                                        <input type="hidden" asp-for="DataInserimentoResponsabileProgettoMinistero" />
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label asp-for="CheckInserimentoResponsabileProgettoEnte" class="label-highlight"></label>
+                                                    <br />
+                                                    <input class="form-check-input" type="checkbox" asp-for="CheckInserimentoResponsabileProgettoEnte" />
+                                                    @(Model.DataInserimentoResponsabileProgettoEnte.HasValue? Model.DataInserimentoResponsabileProgettoEnte.Value.ToString("dd/MM/yyyy"): "")
+                                                    <span asp-validation-for="CheckInserimentoResponsabileProgettoEnte" class="text-danger"></span>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label asp-for="NoteProgettoResponsabileProgettoEnte" class="label-highlight"></label>
+                                                    <textarea asp-for="NoteProgettoResponsabileProgettoEnte" class="form-control auto-expand"></textarea>
+                                                    <span asp-validation-for="NoteProgettoResponsabileProgettoEnte" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label asp-for="CheckInserimentoResponsabileProgettoMinistero" class="label-highlight"></label>
+                                                    <br />
+                                                    <input class="form-check-input" type="checkbox" disabled asp-for="CheckInserimentoResponsabileProgettoMinistero" />
+                                                    @(Model.DataInserimentoResponsabileProgettoMinistero.HasValue? Model.DataInserimentoResponsabileProgettoMinistero.Value.ToString("dd/MM/yyyy") : "")
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label asp-for="NoteProgettoResponsabileProgettoMinistero" class="label-highlight"></label>
+                                                    <textarea asp-for="NoteProgettoResponsabileProgettoMinistero" redonly class="form-control-plaintext"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                    <!-- Responsabile Progetto ministero -->
+                                    @if ((bool)(ViewBag.ResponsabileMinistero ?? false))
+                                    {
+                                        <input type="hidden" name="TipoResponsabile" value="MINISTERO" />
+                                        //Non modifico il parere del responsabile progetto
+                                        <input type="hidden" asp-for="NoteProgettoResponsabileProgettoEnte" />
+                                        <input type="hidden" asp-for="CheckInserimentoResponsabileProgettoEnte" />
+                                        <input type="hidden" asp-for="DataInserimentoResponsabileProgettoEnte" />
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label asp-for="CheckInserimentoResponsabileProgettoEnte" class="label-highlight"></label>
+                                                    <br />
+                                                    <input class="form-check-input" type="checkbox" disabled asp-for="CheckInserimentoResponsabileProgettoEnte" />
+                                                    @(Model.DataInserimentoResponsabileProgettoEnte.HasValue ? Model.DataInserimentoResponsabileProgettoEnte.Value.ToString("dd/MM/yyyy") : "")
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label asp-for="NoteProgettoResponsabileProgettoEnte" class="label-highlight"></label>
+                                                    <textarea asp-for="NoteProgettoResponsabileProgettoEnte" redonly class="form-control-plaintext"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label asp-for="CheckInserimentoResponsabileProgettoMinistero" class="label-highlight"></label>
+                                                    <br />
+                                                    <input class="form-check-input" type="checkbox" asp-for="CheckInserimentoResponsabileProgettoMinistero" />
+                                                    @(Model.DataInserimentoResponsabileProgettoMinistero.HasValue ? Model.DataInserimentoResponsabileProgettoMinistero.Value.ToString("dd/MM/yyyy") : "")
+                                                    <span asp-validation-for="CheckInserimentoResponsabileProgettoMinistero" class="text-danger"></span>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label asp-for="NoteProgettoResponsabileProgettoMinistero" class="label-highlight"></label>
+                                                    <textarea asp-for="NoteProgettoResponsabileProgettoMinistero" class="form-control auto-expand"></textarea>
+                                                    <span asp-validation-for="NoteProgettoResponsabileProgettoMinistero" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        @if ((bool)(ViewBag.ResponsabileProgetto ?? false))
+                        {
+                            <div class="row justify-content-center">
+                                <div class="col-6">
+                                    <input type="submit" value="Aggiorna Progetto" class="btn btn-primary" />
+                                </div>
+                                <div class="col-6">
+                                </div>
+                            </div>
+                        }
+                        @if ((bool)(ViewBag.ResponsabileMinistero ?? false))
+                        {
+                            <div class="row justify-content-center">
+                                <div class="col-6">
+                                </div>
+                                <div class="col-6">
+                                    <input type="submit" value="Aggiorna Progetto" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        }
+                    </form>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="container-fluid">
+                            <!-- Intestazione -->
+                            <div class="row fw-bold pb-2 mb-2">
+                                <div class="col-6" style="text-align:center;background-color:rgb(255, 229, 153);padding:15px">Note di progetto a cura del Responsabile Progetto Ente</div>
+                                <div class="col-6" style="text-align:center;background-color:rgb(180, 219, 142);padding:15px">Note di progetto a cura del Responsabile Progetto Ministero</div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-6">@Model.NoteProgettoResponsabileProgettoEnte</div>
+                                <div class="col-6">@Model.NoteProgettoResponsabileProgettoMinistero</div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <br />
+                <div>
+                    <a asp-action="ElencoSchedeProgetto" asp-controller="Schede">Torna a schede e progetti</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <style>
+        textarea.auto-expand {
+            overflow: hidden;
+            resize: none;
+        }
+    </style>
+    <script>
+        function autoExpand(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('textarea.auto-expand').forEach(autoExpand);
+        });
+
+        document.addEventListener('input', function (event) {
+            if (event.target.classList.contains('auto-expand')) {
+                autoExpand(event.target);
+            }
+        });
+    </script>
+    <style>
+        .temi-tooltip {
+            border-bottom: 1px dotted #555;
+            cursor: help;
+            display: inline-block;
+        }
+    </style>
+}
