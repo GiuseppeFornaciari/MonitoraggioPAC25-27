@@ -90,7 +90,8 @@ namespace MonitoraggioPAC25_27.Controllers
                 ViewData["ResonsabileSchedaEnte"] = schedaProgetto.ResponsabileScheda;
                 ViewData["ResponsabiliProgettoMinistero"] = schedaProgetto.ResponsabiliProgettoMinistero;
             }
-            ViewData["Monitoraggio"] = "20250630";
+            var monitoraggioAttivo = await GetMonitoraggioAttivoAsync();
+            ViewData["Monitoraggio"] = monitoraggioAttivo?.ToString("yyyyMMdd") ?? string.Empty;
             ViewData["CodTema"] = new SelectList(_context.Temis, "CodTema", "Tema", o.CodTema);
             ViewData["CodTipoOutput"] = new SelectList(_context.TipiOutputs, "CodTipoOutput", "TipoOutput", o.CodTipoOutput);
 
@@ -262,6 +263,15 @@ namespace MonitoraggioPAC25_27.Controllers
             ViewBag.FileList = _allegatiService.GetFileList(output);
 
             return PartialView("_Allegati", output);
+        }
+
+        private async Task<DateOnly?> GetMonitoraggioAttivoAsync()
+        {
+            var periodoAttivo = await _context.PeriodiMonitoraggios
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.attivo);
+
+            return periodoAttivo?.DataMonitoraggio;
         }
     }
 }

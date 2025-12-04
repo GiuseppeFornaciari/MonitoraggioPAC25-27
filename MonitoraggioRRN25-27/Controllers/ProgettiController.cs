@@ -130,7 +130,8 @@ namespace MonitoraggioPAC25_27.Controllers
                     .AnyAsync(u => u.idProgetto == schedaProgetto.IdProgetto && user == schedaProgetto.ResponsabiliProgettoMinisteroEmail);
                 ViewData["isResponsabileMinistero"] = isResponsabileMinistero;
 
-                ViewData["Monitoraggio"] = "20250630";
+                var monitoraggioAttivo = await GetMonitoraggioAttivoAsync();
+                ViewData["Monitoraggio"] = monitoraggioAttivo?.ToString("yyyyMMdd") ?? string.Empty;
                 ViewData["ResonsabiliProgettoEnte"] = schedaProgetto.ResponsabiliProgettoEnte;
                 ViewData["ResonsabileSchedaEnte"] = schedaProgetto.ResponsabileScheda;
                 ViewData["ResponsabiliProgettoMinistero"] = schedaProgetto.ResponsabiliProgettoMinistero;
@@ -180,6 +181,14 @@ namespace MonitoraggioPAC25_27.Controllers
                 return RedirectToAction("Progetto", new { id = p.idProgetto });
             }
             return View(p);
+        }
+        private async Task<DateOnly?> GetMonitoraggioAttivoAsync()
+        {
+            var periodoAttivo = await _context.PeriodiMonitoraggios
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.attivo);
+
+            return periodoAttivo?.DataMonitoraggio;
         }
 
         public async Task<IActionResult> EliminaProgetto(int? id)

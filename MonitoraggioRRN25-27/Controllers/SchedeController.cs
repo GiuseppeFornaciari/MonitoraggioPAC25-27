@@ -98,7 +98,8 @@ namespace MonitoraggioPAC25_27.Controllers
                 .Distinct()
                 .ToListAsync();
 
-            ViewData["Monitoraggio"] = "20250630";
+            var monitoraggioAttivo = await GetMonitoraggioAttivoAsync();
+            ViewData["Monitoraggio"] = monitoraggioAttivo?.ToString("yyyyMMdd") ?? string.Empty;
             ViewData["Ruolo"] = ruolo;
             ViewData["Utente"] = user;
             ViewData["Casi"] = result.Count();
@@ -138,8 +139,16 @@ namespace MonitoraggioPAC25_27.Controllers
 
             if (ModelState.IsValid)
             {
+                var monitoraggioAttivo = await GetMonitoraggioAttivoAsync();
+                if (!monitoraggioAttivo.HasValue)
+                {
+                    ModelState.AddModelError(nameof(Schede.DataMonitoraggio), "Nessun periodo di monitoraggio attivo configurato.");
+                    ViewData["CodEnte"] = new SelectList(_context.Entis, "CodEnte", "DescrizioneEnte", schede.CodEnte);
+                    return View(schede);
+                }
+
                 //data monitoraggio attiva
-                schede.DataMonitoraggio = DateOnly.ParseExact("20250630", "yyyyMMdd");
+                schede.DataMonitoraggio = monitoraggioAttivo.Value;
 
                 _context.Add(schede);
                 await _context.SaveChangesAsync();
@@ -215,6 +224,14 @@ namespace MonitoraggioPAC25_27.Controllers
             }
 
             return View(schede);
+        }
+        private async Task<DateOnly?> GetMonitoraggioAttivoAsync()
+        {
+            var periodoAttivo = await _context.PeriodiMonitoraggios
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.attivo);
+
+            return periodoAttivo?.DataMonitoraggio;
         }
 
         [HttpPost, ActionName("EliminaScheda")]
