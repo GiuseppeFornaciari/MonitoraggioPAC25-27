@@ -1,0 +1,51 @@
+﻿@model MonitoraggioRetePAC25_27.Models.Schede
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>SCHEDA</h1>
+<h4>Modifica</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Scheda">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdScheda" />
+            <input type="hidden" asp-for="DataMonitoraggio" />
+            <div class="form-group">
+                <label asp-for="CodScheda" class="control-label"></label>
+                <input asp-for="CodScheda" class="form-control" />
+                <span asp-validation-for="CodScheda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodEnte" class="control-label"></label>
+                <select asp-for="CodEnte" class="form-control" asp-items="ViewBag.CodEnte"></select>
+                <span asp-validation-for="CodEnte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scheda" class="control-label"></label>
+                <input asp-for="Scheda" class="form-control" />
+                <span asp-validation-for="Scheda" class="text-danger"></span>
+            </div>
+@*             <div class="form-group">
+                <label asp-for="DataMonitoraggio" class="control-label"></label>
+                <input asp-for="DataMonitoraggio" class="form-control" />
+                <span asp-validation-for="DataMonitoraggio" class="text-danger"></span>
+            </div> *@
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Modifica Scheda" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="ElencoSchedeProgetto" asp-controller="Schede">Torna alle schede</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

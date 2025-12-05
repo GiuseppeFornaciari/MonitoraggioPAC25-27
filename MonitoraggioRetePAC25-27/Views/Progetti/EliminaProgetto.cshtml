@@ -1,0 +1,40 @@
+﻿@model MonitoraggioRetePAC25_27.Models.Progetti
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>CANCELLAZIONE PROGETTO</h1>
+
+<h3>Sei sicuro di cancellare il progetto?</h3>
+<div>
+    <h4>Progetto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdScheda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdSchedaNavigation.CodScheda)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CodProgetto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CodProgetto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Progetto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Progetto)
+        </dd>
+
+    </dl>
+    
+    <form asp-action="EliminaProgetto">
+        <input type="hidden" asp-for="idProgetto" />
+        <input type="submit" value="Elimina" class="btn btn-danger" /> |
+        <a asp-action="ElencoProgetti">Torna a elenco progetti</a>
+    </form>
+</div>

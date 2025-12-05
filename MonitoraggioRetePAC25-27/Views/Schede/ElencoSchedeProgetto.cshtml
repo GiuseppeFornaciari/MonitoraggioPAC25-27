@@ -1,0 +1,132 @@
+﻿@model IEnumerable<MonitoraggioRetePAC25_27.Models.SchedaProgettoDTO>
+@{
+    ViewData["Title"] = "Schede e progetti";
+}
+  
+
+@if (Model == null)
+{
+    <span>nessuna scheda abilitata</span>
+}
+else
+{
+
+    <div class="row">
+        <div class="col d-flex align-items-center">
+            <h3 class="mb-0">Schede e Progetti</h3>
+        </div>
+        <div class="col d-flex justify-content-end align-items-center">
+            <form method="post" asp-controller="schede" asp-action="ExportCompleto" class="d-inline-block mb-0">
+                <input type="hidden" name="monitoraggio" value="@ViewBag.Monitoraggio" />
+                <input type="hidden" name="ruolo" value="@ViewBag.Ruolo" />
+                <input type="hidden" name="utente" value="@ViewBag.Utente" />
+                <input type="submit" value="download" class="btn btn-secondary" />
+            </form>
+        </div>
+    </div>
+
+    <br />
+    <div class="row align-items-center mb-3">
+        @*         
+            @if(@ViewBag.Ruolo=="segretariato" || @ViewBag.Ruolo=="administrator"){
+            <div class="col-auto">
+                <a asp-action="NuovaScheda" asp-controller="Schede" class="btn btn-primary">Nuovo scheda</a>
+                <a asp-action="NuovoProgetto" asp-controller="Progetti" class="btn btn-primary">Nuovo progetto</a>
+            </div>
+        } 
+        *@
+
+        <div class="col-auto">
+            <label for="search" class="col-form-label">Ricerca</label>
+        </div>
+
+        <div class="col-md-5">
+            <form method="get" asp-controller="Schede" asp-action="ElencoSchedeProgetto" class="form-inline">
+                <div class="input-group">
+                    @Html.TextBox("search", ViewData["Search"], new { @class = "form-control", @placeholder = "Cerca..." })
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary" style="margin-left:20px;">Filtra</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+       <div class="col-md-2 text-right">
+            <label class="mb-0">Progetti: <span style="color:red; font-weight:bold;">@ViewBag.Casi</span></label>
+        </div>
+    </div>
+
+    <hr />
+
+    <table class="table">
+        <thead class="align-middle bg-light<S text-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Scheda)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponsabileScheda)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Progetto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponsabiliProgettoEnte)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponsabiliProgettoMinistero)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @if (item.CodScheda != null){
+                            <strong>@Html.DisplayFor(modelItem => item.CodScheda)</strong> @: @Html.DisplayFor(modelItem => item.Scheda)
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResponsabileScheda)
+                    </td>
+                    <td>
+                        @if (item.CodProgetto == null)
+                        {
+                            <span>inserire progetto</span>
+                        }
+                        else
+                        {    
+                            //@if (User.IsInRole("segretariato") || ViewBag.Utente=="p.ammassari@politicheagricole.it")
+                            @if (User.IsInRole("segretariato"))
+                            {
+                                @Html.ActionLink((string)item.CodProgetto, "Progetto", "Progetti", new { id = item.IdProgetto })  @: @Html.DisplayFor(modelItem => item.Progetto)
+                            }
+                            else
+                            {
+                                @if 
+                                    (
+                                    item.ResponsabileSchedaEmail.Contains(User.Identity.Name) || 
+                                    item.ResponsabiliProgettoEnteEmail.Contains(User.Identity.Name) || 
+                                    item.ResponsabiliProgettoMinisteroEmail.Contains(User.Identity.Name)
+                                    )
+                                {
+                                    @Html.ActionLink((string)item.CodProgetto, "Progetto", "Progetti", new { id = item.IdProgetto })  @: @Html.DisplayFor(modelItem => item.Progetto)
+                                }
+                                else
+                                {
+                                    @Html.DisplayFor(modelItem => item.CodProgetto)  @: @Html.DisplayFor(modelItem => item.Progetto)
+                                }
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResponsabiliProgettoEnte)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResponsabiliProgettoMinistero)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

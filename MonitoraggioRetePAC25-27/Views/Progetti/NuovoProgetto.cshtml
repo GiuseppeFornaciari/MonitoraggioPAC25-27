@@ -1,0 +1,63 @@
+﻿@model MonitoraggioRetePAC25_27.Models.Progetti
+
+@{
+    ViewData["Title"] = "Nuovo Progetto";
+}
+
+<h1>PROGETTO</h1>
+<h4>Creazione</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NuovoProgetto" asp-controller="Progetti">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdScheda" class="control-label"></label>
+                <select asp-for="IdScheda" class="form-control" asp-items="ViewBag.IdScheda"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodProgetto" class="control-label"></label>
+                <input asp-for="CodProgetto" class="form-control" />
+                <span asp-validation-for="CodProgetto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Progetto" class="control-label"></label>
+                <input asp-for="Progetto" class="form-control" />
+                <span asp-validation-for="Progetto" class="text-danger"></span>
+            </div>
+@*             <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CheckInserimentoResponsabileEnte" /> @Html.DisplayNameFor(model => model.CheckInserimentoResponsabileEnte)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CheckInserimentoResponsabileMinistero" /> @Html.DisplayNameFor(model => model.CheckInserimentoResponsabileMinistero)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoteProgettoResponsabileEnte" class="control-label"></label>
+                <input asp-for="NoteProgettoResponsabileEnte" class="form-control" />
+                <span asp-validation-for="NoteProgettoResponsabileEnte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoteProgettoResponsabileMinistero" class="control-label"></label>
+                <input asp-for="NoteProgettoResponsabileMinistero" class="form-control" />
+                <span asp-validation-for="NoteProgettoResponsabileMinistero" class="text-danger"></span>
+            </div> *@
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Registra Progetto" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="ElencoSchedeProgetto" asp-controller="Schede">Torna alle schede</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
