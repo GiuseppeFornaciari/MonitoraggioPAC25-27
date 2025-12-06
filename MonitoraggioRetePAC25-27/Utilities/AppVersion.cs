@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Reflection;
+using System.IO;
 
 namespace MonitoraggioRetePAC25_27.Utilities
 {
@@ -32,6 +33,7 @@ namespace MonitoraggioRetePAC25_27.Utilities
 
         public static string GetWithCommitDate()
         {
+            var assembly = Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly();
             var baseVersion = Get();
             string commitDate = "";
 
@@ -49,6 +51,16 @@ namespace MonitoraggioRetePAC25_27.Utilities
             catch
             {
                 // in caso di errore (es. git non presente) commitDate resta vuoto
+            }
+
+            if (string.IsNullOrEmpty(commitDate))
+            {
+                // Usa la data dell'assembly come fallback (es. ambiente di produzione senza git)
+                var assemblyPath = assembly.Location;
+                if (!string.IsNullOrEmpty(assemblyPath) && File.Exists(assemblyPath))
+                {
+                    commitDate = File.GetLastWriteTime(assemblyPath).ToString("dd/MM/yyyy");
+                }
             }
 
             return string.IsNullOrEmpty(commitDate)
