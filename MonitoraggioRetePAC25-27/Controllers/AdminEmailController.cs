@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MonitoraggioRetePAC25_27.Data;
 using MonitoraggioRetePAC25_27.Models;
 using System.Linq;
@@ -109,7 +110,9 @@ Monitoraggio PAC 25-27",
             Log = _context.LogEmailInvios
                       .OrderByDescending(x => x.DataInvio)
                       .Take(50)
-                      .ToList()
+                      .ToList(),
+
+            DestinatariDisponibili = GetDestinatariSelectList()
         };
 
         return View(vm);
@@ -125,22 +128,34 @@ Monitoraggio PAC 25-27",
                 .Take(50)
                 .ToList();
 
+            model.DestinatariDisponibili = GetDestinatariSelectList();
+
             return View(model);
         }
 
         // Trovo l'utente Identity
         var identityUser = await _userManager.FindByEmailAsync(model.Destinatario);
-        string userId = identityUser?.Id ?? "N/A";
+        if (identityUser == null)
+        {
+            ModelState.AddModelError(nameof(model.Destinatario), "Selezionare un utente registrato.");
+
+            model.Log = _context.LogEmailInvios
+                .OrderByDescending(x => x.DataInvio)
+                .Take(50)
+                .ToList();
+
+            model.DestinatariDisponibili = GetDestinatariSelectList();
+
+            return View(model);
+
+        }
+        string userId = identityUser.Id;
 
         // Recupero il codice utente reale dalla tabella Utenti
-        string codUtente = null;
-        if (identityUser != null)
-        {
-            codUtente = _context.Utentis
-                .Where(u => u.idAspNetUser == identityUser.Id)
-                .Select(u => u.Utente)
-                .FirstOrDefault();
-        }
+        string codUtente = _context.Utentis
+            .Where(u => u.idAspNetUser == identityUser.Id)
+            .Select(u => u.Utente)
+            .FirstOrDefault();
 
         string userName = codUtente ?? model.Destinatario;
 
@@ -195,6 +210,19 @@ Monitoraggio PAC 25-27",
             .Take(50)
             .ToList();
 
+        model.DestinatariDisponibili = GetDestinatariSelectList();
+
         return View(model);
+    }
+    private List<SelectListItem> GetDestinatariSelectList()
+    {
+        return _userManager.Users
+            .OrderBy(u => u.Email)
+            .Select(u => new SelectListItem
+            {
+                Value = u.Email,
+                Text = u.Email
+            })
+            .ToList();
     }
 }

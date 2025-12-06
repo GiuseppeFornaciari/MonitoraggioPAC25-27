@@ -5,20 +5,25 @@
         <h4>Invio email singola</h4>
 
         <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="mb-3">
                 <label class="form-label">Destinatario</label>
-                <input type="email" class="form-control" asp-for="Destinatario" />
+                <select class="form-select" asp-for="Destinatario" asp-items="Model.DestinatariDisponibili">
+                    <option value="">Seleziona un utente registrato</option>
+                </select>
                 <span asp-validation-for="Destinatario" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Oggetto</label>
                 <input type="text" class="form-control" asp-for="Oggetto" />
+                <span asp-validation-for="Oggetto" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Messaggio</label>
                 <textarea asp-for="MessaggioHtml" rows="8" class="form-control"></textarea>
+                <span asp-validation-for="MessaggioHtml" class="text-danger"></span>
             </div>
 
             <button class="btn btn-primary">Invia Email</button>
@@ -40,12 +45,24 @@
             <tbody>
                 @foreach (var log in Model.Log)
                 {
+                    var collapseId = $"log-{log.Id}";
                     <tr>
-                        <td>@log.DataInvio</td>
-                        <td>@log.Email</td>
-                        <td>@log.Oggetto</td>
-                        <td style="white-space:pre-line">@log.Messaggio</td>
-                        <td>@log.Esito</td>
+                        <td class="text-nowrap">@log.DataInvio.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td class="text-nowrap">@log.Email</td>
+                        <td class="text-truncate" style="max-width: 180px; white-space: nowrap;" title="@log.Oggetto">@log.Oggetto</td>
+                        <td class="text-truncate align-middle" style="max-width: 220px; white-space: nowrap;">
+                            <button class="btn btn-link btn-sm p-0" type="button" data-bs-toggle="collapse" data-bs-target="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
+                                Mostra
+                            </button>
+                            <span class="ms-2 d-inline-block text-truncate align-middle" style="max-width: 150px;" title="@log.Messaggio">@log.Messaggio</span>
+                            <div class="collapse mt-2" id="@collapseId">
+                                <div class="border rounded bg-light p-2 text-break" style="white-space:pre-wrap;">
+                                    @log.Messaggio
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-nowrap">@log.Esito</td>
+
                     </tr>
                 }
             </tbody>
